@@ -50,9 +50,48 @@
     /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
     gap: 5px;
     padding: 5px;  
+   /* grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); */
 
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  /*   grid-template-columns: repeat(auto-fit, minmax(325px, 425px)); */
+
+    /* grid-template-columns: repeat(auto-fit, minmax( 100px, 325px)); */
     }
+/* 
+cada 330px */
+    @media (min-width: 664px) {
+  .block{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 994px) {
+  .block{ grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1324px) {
+  .block{ grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1654px) {
+  .block{ grid-template-columns: repeat(5, 1fr); }
+}
+@media (min-width: 1984px) {
+  .block{ grid-template-columns: repeat(6, 1fr); }
+}
+@media (min-width: 2314px) {
+  .block{ grid-template-columns: repeat(7, 1fr); }
+}
+@media (min-width: 2614px) {
+  .block{ grid-template-columns: repeat(8, 1fr); }
+}
+
+@media (min-width: 2944px) {
+  .block{ grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); }
+}
+
+
+
+
+/* @media (min-width: 1200px) {
+  .block{ grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); }
+} */
     .block personaje {
    margin-bottom: 0px; 
    display: block;
@@ -76,7 +115,18 @@
   </style>
 </head>
 <body>
+  <div style="
+  width: fit-content;
+  width: 100%;
+  box-sizing: content-box;
+  background-color: red;
+  display: block;overflow: hidden;
+"> 
 
+    <input type="text" id="buscar_personaje" placeholder="Buscar.." title="Buscar personaje" style="width: 100%;    border: 2px solid #e9e9e9; height:50px;width: -webkit-fill-available;    
+  ">
+  </div>
+  
   <div> <button id="list_btn" class="btn" onclick="cambiar_clase_personaje('lista');"> vista lista </button> 
     <button id="block_btn" class="btn active" onclick="cambiar_clase_personaje('block');"> vista bloque </button>  </div>
  <!--  <div class="list"> -->
@@ -87,17 +137,70 @@
     <div class="thumbnail_container" style="background-image: url(betania_lugre.png);"></div>
     <div class="personaje_detalles">
       <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre"> Betania Lugre </div>
+       <div class="personaje_nombre">  <a>Betania Lugre</a> </div>
         <div class="personaje_raza"> Humana </div>
       </diV>
     </div>
   </personaje>
 
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
       <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
+       <div class="personaje_nombre">  <a>Personaje 1</a> </div>
+        <div class="personaje_raza"> Raza </div>
+      </diV>
+    </div>
+  </personaje>
+
+  <personaje>
+    <div class="thumbnail_container"></div>
+    <div class="personaje_detalles">
+      <diV class="personaje_nombre_y_raza">
+       <div class="personaje_nombre">  <a>Personaje 2</a> </div>
+        <div class="personaje_raza"> Raza </div>
+      </diV>
+    </div>
+  </personaje>
+
+  <personaje>
+    <div class="thumbnail_container"></div>
+    <div class="personaje_detalles">
+      <diV class="personaje_nombre_y_raza">
+       <div class="personaje_nombre">  <a>Personaje 3</a> </div>
+        <div class="personaje_raza"> Raza </div>
+      </diV>
+    </div>
+  </personaje>
+
+  <personaje>
+    <div class="thumbnail_container"></div>
+    <div class="personaje_detalles">
+      <diV class="personaje_nombre_y_raza">
+       <div class="personaje_nombre">  <a>Personaje 4</a> </div>
+        <div class="personaje_raza"> Raza </div>
+      </diV>
+    </div>
+  </personaje>
+
+
+  <personaje>
+    <div class="thumbnail_container"></div>
+    <div class="personaje_detalles">
+      <diV class="personaje_nombre_y_raza">
+       <div class="personaje_nombre">  <a>Personaje 5</a> </div>
+        <div class="personaje_raza"> Raza </div>
+      </diV>
+    </div>
+  </personaje>
+
+
+  <personaje>
+    <div class="thumbnail_container"></div>
+    <div class="personaje_detalles">
+      <diV class="personaje_nombre_y_raza">
+       <div class="personaje_nombre">  <a>Personaje 6</a> </div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
@@ -109,7 +212,7 @@
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
       <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
+       <div class="personaje_nombre">  <a>Personaje 7</a> </div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
@@ -121,91 +224,16 @@
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
       <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
+       <div class="personaje_nombre">  <a>Personaje 8</a> </div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
-
-
-
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
       <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-        <div class="personaje_nombre">Personaje</div>
+       <div class="personaje_nombre">  <a>Personaje 9</a> </div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
@@ -263,4 +291,43 @@ function cambiar_clase_personaje(valor){
 
 
 </script>
+
+<script>
+  var input = document.getElementById("buscar_personaje");
+  input.addEventListener("input", busqueda);
+  
+  function busqueda(e) {
+
+    
+    var filter = e.target.value.toUpperCase();
+    var list = document.getElementById("personajes");
+    var divs = list.getElementsByTagName("personaje");
+ 
+    for (var i = 0; i < divs.length; i++) {
+
+      var detalles = divs[i].getElementsByClassName("personaje_detalles")[0].getElementsByClassName("personaje_nombre_y_raza")[0].getElementsByClassName("personaje_nombre")[0];
+      var a = detalles.getElementsByTagName("a")[0];
+    
+      if (a) {
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          divs[i].style.display = "";
+          // mostrar_cantidad_de_personajes();
+        } else {
+          divs[i].style.display = "none";
+          // mostrar_cantidad_de_personajes();
+        }
+      }
+    }
+  
+  }
+  </script>
+
+<!--   <script>
+ var list = document.getElementById("personajes");
+  
+  var divs = list.getElementsByTagName("personaje");
+
+  var detalles = divs[0].getElementsByClassName("personaje_detalles")[0].getElementsByClassName("personaje_nombre_y_raza")[0].getElementsByClassName("personaje_nombre")[0]
+  console.log(detalles);
+  </script> -->
 </html>
