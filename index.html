@@ -5,34 +5,85 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title> WIKI </title>
   <style> 
-    body{ font-family: "proxima-nova",sans-serif; margin: 0;padding: 5px; background-color: #b7b7b7;  }
+    body{ 
+      font-family: "proxima-nova",
+      sans-serif; margin: 0;
+      /* padding: 5px;  */
+      background-color: #b7b7b7;  
+    }
+
+
+    .list{display: block;padding: 5px;  } 
+
+
     personaje{
       display: flex;
       width: 100%;
       height: 80px;
-      background-color: white;
+      background-color:     #f0f0f0;
       box-sizing: border-box;
       margin-bottom: 5px;
-      padding: 5px;  
+  
     }
     .thumbnail_container{  
       display: block; 
       background-color: #3b3636;
-      aspect-ratio: 1;
+      aspect-ratio: 1.2/1;
+
+      background-image: url('thumb_default_test.png');
+      background-position: center;
+      background-size: cover;
     }
     .personaje_detalles{
       display: flex;
       align-items: center;
       padding-left: 10px;
     }
-    .personaje_raza{color: #abaab3;}
+    .personaje_raza{color: #abaab3;    margin-top: 5px;}
+
+
+    .block{
+      display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    gap: 5px;
+    padding: 5px;  
+
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    }
+    .block personaje {
+   margin-bottom: 0px; 
+   display: block;
+    height: auto;
+  
+}
+.block .personaje_detalles{
+
+  padding: 15px;
+  padding-top: 5px;
+    }
+.block .personaje_nombre_y_raza{
+  width: 100%;
+  
+    font-weight: 600;
+    text-align: center;
+}
+
+ .block .thumbnail_container {aspect-ratio: 237/146;}
+
   </style>
 </head>
 <body>
+
+  <div> <button id="list_btn" class="btn" onclick="cambiar_clase_personaje('lista');"> vista lista </button> 
+    <button id="block_btn" class="btn active" onclick="cambiar_clase_personaje('block');"> vista bloque </button>  </div>
+ <!--  <div class="list"> -->
+  <personajes id="personajes" class="block">
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
@@ -42,125 +93,171 @@
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
+
+
   <personaje>
     <div class="thumbnail_container"></div>
     <div class="personaje_detalles">
-      <diV>
+      <diV class="personaje_nombre_y_raza">
         <div class="personaje_nombre">Personaje</div>
         <div class="personaje_raza"> Raza </div>
       </diV>
     </div>
   </personaje>
 
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV>
-        <div class="personaje_nombre">Personaje</div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
+</personajes>
+<!-- </div> -->
 
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV>
-        <div class="personaje_nombre">Personaje</div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-  
 
 
 </body>   
-<script></script>
+<script>
+  // tomar valor predeterminado
+if ( localStorage.julifgithubio_blog_poststyle_preference ==  undefined) {  cambiar_clase_personaje('block'); }
+else{cambiar_clase_personaje(localStorage.julifgithubio_blog_poststyle_preference); }
+
+
+
+
+function cambiar_clase_personaje(valor){
+  switch (valor) {
+    case "lista":
+    document.getElementById("block_btn").classList.remove("active");
+    document.getElementById("list_btn").classList.add("active");
+
+
+    document.getElementById("personajes").classList.add("list");
+    document.getElementById('personajes').classList.remove("block");
+
+
+
+    localStorage.julifgithubio_blog_poststyle_preference = 'lista';
+      break;
+    case "block":
+    document.getElementById("block_btn").classList.add("active");
+    document.getElementById("list_btn").classList.remove("active");
+
+    document.getElementById("personajes").classList.remove("list");
+    document.getElementById('personajes').classList.add("block");
+
+
+
+    localStorage.julifgithubio_blog_poststyle_preference = 'block';
+  }
+
+ }
+//function vista_bloque() {
+//  document.getElementById('list').classList.add("block");
+//}
+//
+//function vista_lista() {
+//  document.getElementById('list').classList.remove("block");
+//}
+// sortList("list");
+
+
+</script>
 </html>
