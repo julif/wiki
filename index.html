@@ -15,7 +15,7 @@
     personaje{
       display: flex;
       width: 100%;
-      height: 80px;
+      height: 60px;
       background-color:     white;
       box-sizing: border-box;
       margin-bottom: 0px;
@@ -156,14 +156,6 @@ function cambiar_clase_personaje(valor){
   }
 
  }
-//function vista_bloque() {
-//  document.getElementById('list').classList.add("block");
-//}
-//
-//function vista_lista() {
-//  document.getElementById('list').classList.remove("block");
-//}
-// sortList("list");
 
 
 </script>
@@ -173,17 +165,13 @@ function cambiar_clase_personaje(valor){
   input.addEventListener("input", busqueda);
   
   function busqueda(e) {
-
-    
     var filter = e.target.value.toUpperCase();
     var list = document.getElementById("personajes");
     var divs = list.getElementsByTagName("personaje");
  
     for (var i = 0; i < divs.length; i++) {
-
       var detalles = divs[i].getElementsByClassName("personaje_detalles")[0].getElementsByClassName("personaje_nombre_y_raza")[0].getElementsByClassName("personaje_nombre")[0];
       var a = detalles.getElementsByTagName("a")[0];
-    
       if (a) {
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
           divs[i].style.display = "";
@@ -197,33 +185,10 @@ function cambiar_clase_personaje(valor){
   
   }
   </script>
-
-  <!-- <script>
- var list = document.getElementById("personajes");
-  
-  var divs = list.getElementsByTagName("personaje");
-
-  var detalles = divs[0].getElementsByClassName("personaje_detalles")[0].getElementsByClassName("personaje_nombre_y_raza")[0].getElementsByClassName("personaje_nombre")[0]
-  console.log(detalles);
-  </script>  -->
-
-
   <script>
-
-// <personaje>
-//     <div class="thumbnail_container" style="background-image: url(thumb_default_test.png);"></div>
-//     <div class="personaje_detalles">
-//       <diV class="personaje_nombre_y_raza">
-//        <div class="personaje_nombre">  <a>Betania Lugre</a> </div>
-//         <div class="personaje_raza"> Humana </div>
-//       </diV>
-//     </div>
-//   </personaje>
   personajes.forEach(personaje => {
-
-document.getElementById('personajes').innerHTML += ' <personaje><div class="thumbnail_container" style="background-image: url( ' + personaje.thumb +');"></div>   <div class="personaje_detalles"> <diV class="personaje_nombre_y_raza"><div class="personaje_nombre">  <a> ' + personaje.nombre +' </a> </div> <div class="personaje_raza"> ' + personaje.raza +' </div></div></personaje>';
-
-});
+    document.getElementById('personajes').innerHTML += ' <personaje><div class="thumbnail_container" style="background-image: url( ' + personaje.thumb +');"></div>   <div class="personaje_detalles"> <diV class="personaje_nombre_y_raza"><div class="personaje_nombre">  <a> ' + personaje.nombre +' </a> </div> <div class="personaje_raza"> ' + personaje.raza +' </div></div></personaje>';  
+  });
 
   </script>
 </html>

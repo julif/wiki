@@ -1,0 +1,92 @@
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="personajes.js"></script>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: "Poppins", sans-serif;
+            color: #3f4750;
+            font-size: 0.9rem;    
+        }
+        main{padding: 12px 50px;}
+        h1,h2{color: black;}
+        a {text-decoration: none;}
+    </style>
+    <style>
+
+/* td {
+    border: 1px solid;
+    padding: 0px 9px;
+} */
+
+
+table {
+          width: 100%;
+          border-collapse: collapse;
+          background: white;
+
+        
+      }
+      th, td {
+          border: 1px solid #dddddd;
+          text-align: center; 
+          padding: 8px;
+      }
+      th {
+          background-color: #f2f2f2;
+          background-color: #cdcdcd;
+      }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
+                <i class="ri-menu-line ri-xl"></i>
+            </a>
+            <h1 style="margin-bottom: 0;">Pro Sidebar</h1>
+            <span style="display: inline-block">
+                Responsive layout with advanced sidebar menu built with SCSS and vanilla Javascript
+            </span>
+            <br>
+            <span>
+                Full Code and documentation available on
+                <a href="https://github.com/azouaoui-med/pro-sidebar-template" target="_blank">Github</a>
+            </span>
+        </div>
+        <div>
+            <h2>Razas</h2>
+            <ul>
+                <li>Entidad cosmica</li>
+                <li>Elfo celestial</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Personajes</h2>
+            <ul id="personajes_lista"></ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>raza</th>
+                    </tr>
+                </thead>
+                <tbody id="personajes_tabla"></tbody>
+            </table>
+        </div>
+
+    </main>
+    <script>
+        personajes.forEach(personaje => {
+          document.getElementById('personajes_tabla').innerHTML += '     <tr><td>' + personaje.nombre +'</td><td>' + personaje.raza +'</td></tr>';
+        });
+    </script>
+        <script>
+            personajes.forEach(personaje => {
+              document.getElementById('personajes_lista').innerHTML += ' <li><a target="_blank" href="https://github.com/azouaoui-med/css-pro-layout">' + personaje.nombre +'</a></li>';
+            });
+        </script>
+</body>

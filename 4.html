@@ -1,0 +1,535 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="personajes.js"></script>
+
+    <style>
+/* background-color: #e8edf7; */
+
+ :root {
+  /* --active_color:  #a60146; */
+  --active_color: #3f88af;
+  --main_background:  #ffffff;
+  --objeto_background: #262f4c;
+  --gap: 20px;
+  --radius: 10px;
+} 
+/*  :root {
+  --main_background:  #e3e9ec; 
+  --objeto_background: white;
+} 
+ */
+ html, body{
+  background-color: var(--main_background);
+ }
+ .active{
+  background-color:  var(--active_color);
+  color: white;
+}
+main{
+  background-color: var(--main_background);
+}
+.objeto{
+  background-color: #333450;
+    height: 200px;
+    width: 50%;
+    width: 50%;
+ 
+    border-radius: var(--radius);
+ /*    margin-right: 7px;
+    margin-left: 7px; */
+}
+.dos_columnas{
+  display: flex;
+  margin: var(--gap);
+  gap: var(--gap);
+}
+.tres_columnas{
+  display: flex;
+  /* margin: var(--gap); */
+  gap: var(--gap);
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.objeto_dos_columnas{
+  background-color: var(--objeto_background);
+  min-height: 10px;
+  overflow: hidden;
+  width: 32%;
+  border-radius: 6px;
+  border-radius: var(--radius);
+  transition: all  1s;
+}
+
+.objeto_tres_columnas{
+  background-color: var(--objeto_background);
+  background-color: #0c111e;
+  background-color:   #18243c;background-color: #0a0a18;
+
+  min-height: 50px;
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  width: 50.5%;
+}
+.objeto_tres_columnas img{    transition: transform 1.5s ease; }
+.objeto_tres_columnas:hover img{    transform: scale(1.2);  object-fit: cover;}
+
+
+#experimento{
+/*   width: var(--card-width);
+    height: var(--card-height); */
+
+  /*   height:calc( 100vw / 2.4); /*   16:9 */
+  height:calc( 100vw / 4.3);
+  width:  100%;
+  background-color: #2b2d38;
+  background-image: url("runescape_1.png");
+  background-position: center;
+  background-size: cover;
+  transition: height 1.5s;
+}
+
+
+sidebar{
+  transition: all  1s;
+  position: fixed;
+  width: 260px;
+  top: 0px;
+  left: 0px;
+}
+main{
+  transition: all  1s;
+  margin-left: 260px;
+  display: inline-table;
+}
+h3{
+  color: #a60146;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+.testo{
+  padding: 35px;
+    padding-top: 0px;font-size: 1.1em;
+    color: #92a1ae;
+    color: #87aac97a;
+}
+
+@media only screen and (max-width: 1050px) { .objeto_tres_columnas{width: 31%;}}
+@media only screen and (max-width: 1100px) { .objeto_tres_columnas{width: 48%;}}
+@media only screen and (max-width: 1000px) {
+  sidebar{ top: 0px; left: -260px;}
+  main{ margin-left: 0px; width: 100%;}
+}
+@media only screen and (max-width: 600px) {
+  .dos_columnas, .tres_columnas {flex-wrap: wrap;}
+  :root { --gap: 15px;} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  background-color: #0a0a18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #202a42;
+    padding: 20px;
+}
+::-webkit-scrollbar {
+width: 7px;
+/* background-color: #e2e8f1; */
+background-color: #0f0f15;
+background-color: #000000;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+/* background-color: rgba(0, 0, 0, 0.2); */
+background-color: var(--active_color);
+ background-color: white; 
+
+border-radius: 3px;
+}
+
+
+
+:root {
+  --sidebar_width: 13%;
+  --white: #ffffff;
+}
+
+/* para evitar que el padding cambie el with */
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+}
+html, 
+body {
+    height: 100%;
+    margin: 0px auto;
+  padding: 0px;
+  background-color: #202137;
+}
+body{
+  margin: 0px;
+  font-family: "proxima-nova",sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: #4a5073;
+  /* background-color: #f5f8fb; */
+
+  display: flex;
+}
+sidebar{
+  height: 100%;
+  width: var(--sidebar_width);
+  display: block;
+  background-color: #0a0a18;
+  min-width: 260px;
+  overflow: hidden;
+
+/*   padding-top: 1rem!important;
+  padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important; */
+
+}
+sidebar_links a{
+  cursor: pointer;
+     color: #ffffffa8; 
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    /* border-radius: 6px; */
+    padding-left: 18px;
+    margin-bottom: 6px;
+}
+sidebar_links a:hover:not(.active){
+  background-color: #141825;
+  background-color: #181e30;
+}
+
+sidebar_links{
+  padding: 15px;
+    /* position: relative; */
+    display: block;
+}
+svg{
+  width: 1.125em;
+}
+main{
+  height: 100%;
+  width:  100%;
+/*   display: block; */
+  /* background-color: green; */
+  background-color: #f0f0f0;
+}
+
+
+banner{
+ /*   */
+  width: 100%;
+  height: 400px;
+  display: block;
+
+
+
+}
+banner_content{
+ 
+  display: block;
+  margin: 1%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: #313250;
+  
+  background-image: url(runescape_1.png);
+  background-position: center;
+  background-size: cover;
+  
+}
+
+cards{
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  flex-wrap: wrap;
+}
+card{
+  display: block;
+  width: 32.5%;
+  background-color: #313250;
+    height: 446px;
+    border-radius: 3%;
+}
+
+
+separador{
+  display: block;
+    height: 3px;
+    background-color: #181e307a;
+    margin: 0px 20px 0px;
+}
+
+/*   :root {--sidebar_width: 0%;}
+
+
+ sidebar{
+    display: none;
+  }
+
+
+  sidebar{
+    display: none;
+  }
+  cards{
+    justify-content: space-around;
+  }
+  card{
+    width: 48%;
+    margin-bottom: 2%; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list{display: block;padding: 5px;  } 
+    personaje{
+      display: flex;
+      width: 100%;
+      height: 60px;
+      background-color:     white;
+      box-sizing: border-box;
+      margin-bottom: 0px;
+      border: 3px solid #e9e9e9;
+    }
+    .thumbnail_container{  
+      display: block; 
+      background-color: #3b3636;
+      aspect-ratio: 1.2/1;
+
+      background-image: url('thumb_default_test.png');
+      background-position: center;
+      background-size: cover;
+    }
+    .personaje_detalles{
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+    .personaje_raza{color: #abaab3;    margin-top: 5px;}
+
+
+    .block{
+      display: grid;
+/*     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  */
+    gap: 5px;
+    padding: 5px;  
+   /* grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); */
+
+  /*   grid-template-columns: repeat(auto-fit, minmax(325px, 425px)); */
+
+    /* grid-template-columns: repeat(auto-fit, minmax( 100px, 325px)); */
+    }
+/* 
+cada 330px */
+    @media (min-width: 664px) {
+  .block{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 994px) {
+  .block{ grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1324px) {
+  .block{ grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1654px) {
+  .block{ grid-template-columns: repeat(5, 1fr); }
+}
+@media (min-width: 1984px) {
+  .block{ grid-template-columns: repeat(6, 1fr); }
+}
+@media (min-width: 2314px) {
+  .block{ grid-template-columns: repeat(7, 1fr); }
+}
+@media (min-width: 2614px) {
+  .block{ grid-template-columns: repeat(8, 1fr); }
+}
+
+@media (min-width: 2944px) {
+  .block{ grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); }
+}
+
+
+
+
+/* @media (min-width: 1200px) {
+  .block{ grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); }
+} */
+    .block personaje {
+   margin-bottom: 0px; 
+   display: block;
+    height: auto;
+  
+}
+.block .personaje_detalles{
+
+  padding: 15px;
+  padding-top: 5px;
+    }
+.block .personaje_nombre_y_raza{
+  width: 100%;
+  
+    font-weight: 600;
+    text-align: center;
+}
+
+ .block .thumbnail_container {aspect-ratio: 237/146;}
+
+    </style>
+  </head>
+  <body>
+    <sidebar>
+ <!--      <img src="logo.png" style="width: 100%;margin-top: 22px;margin-bottom: 16px;">
+      <separador></separador> -->
+      <sidebar_links>
+        <a> Inicio </a>
+        <a> Linea de tiempo </a>
+        <a class="active"> Personajes </a>
+        <a> Razas </a>
+        <a> Mundos </a>
+        
+       
+      </sidebar_links>
+      <separador></separador>
+
+    </sidebar>
+
+<!-- <sidebar_width></sidebar_width> -->
+    <main>  <!--<img src="tenticle-head-games-logo-large.jpg" style="width: 100%; height: 337px; object-fit: cover;" "=""> -->
+
+    <!--  barra de busqueda de personaje -->
+    <div>
+      <input type="text" id="buscar_personaje" placeholder="Buscar.." title="Buscar personaje" style="width: 100%;    border: 2px solid #e9e9e9; height:50px;width: -webkit-fill-available;">
+    </div>
+     <!--  Botones de vista clase y vista lista -->
+    <div> 
+      <button id="list_btn" class="btn" onclick="cambiar_clase_personaje('lista');"> vista lista </button> 
+      <button id="block_btn" class="btn active" onclick="cambiar_clase_personaje('block');"> vista bloque </button>  
+    </div>
+ <!--  personajes -->
+ <personajes id="personajes" class="block"></personajes>
+<!--  <footer> footer </footer>  -->
+ 
+    </main>
+</body>
+<script>
+  // tomar valor predeterminado
+if ( localStorage.julifgithubio_blog_poststyle_preference ==  undefined) {  cambiar_clase_personaje('block'); }
+else{cambiar_clase_personaje(localStorage.julifgithubio_blog_poststyle_preference); }
+
+
+
+
+function cambiar_clase_personaje(valor){
+  switch (valor) {
+    case "lista":
+    document.getElementById("block_btn").classList.remove("active");
+    document.getElementById("list_btn").classList.add("active");
+
+
+    document.getElementById("personajes").classList.add("list");
+    document.getElementById('personajes').classList.remove("block");
+
+
+
+    localStorage.julifgithubio_blog_poststyle_preference = 'lista';
+      break;
+    case "block":
+    document.getElementById("block_btn").classList.add("active");
+    document.getElementById("list_btn").classList.remove("active");
+
+    document.getElementById("personajes").classList.remove("list");
+    document.getElementById('personajes').classList.add("block");
+
+
+
+    localStorage.julifgithubio_blog_poststyle_preference = 'block';
+  }
+
+ }
+
+
+</script>
+
+<script>
+  var input = document.getElementById("buscar_personaje");
+  input.addEventListener("input", busqueda);
+  
+  function busqueda(e) {
+    var filter = e.target.value.toUpperCase();
+    var list = document.getElementById("personajes");
+    var divs = list.getElementsByTagName("personaje");
+ 
+    for (var i = 0; i < divs.length; i++) {
+      var detalles = divs[i].getElementsByClassName("personaje_detalles")[0].getElementsByClassName("personaje_nombre_y_raza")[0].getElementsByClassName("personaje_nombre")[0];
+      var a = detalles.getElementsByTagName("a")[0];
+      if (a) {
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          divs[i].style.display = "";
+          // mostrar_cantidad_de_personajes();
+        } else {
+          divs[i].style.display = "none";
+          // mostrar_cantidad_de_personajes();
+        }
+      }
+    }
+  
+  }
+  </script>
+<script>
+  personajes.forEach(personaje => {
+    document.getElementById('personajes').innerHTML += ' <personaje><div class="thumbnail_container" style="background-image: url( ' + personaje.thumb +');"></div>   <div class="personaje_detalles"> <diV class="personaje_nombre_y_raza"><div class="personaje_nombre">  <a> ' + personaje.nombre +' </a> </div> <div class="personaje_raza"> ' + personaje.raza +' </div></div></personaje>';  
+  });
+
+  </script>
+</html>
+
