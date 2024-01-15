@@ -4,29 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title> WIKI </title>
+  <script src="personajes.js"></script>
   <style> 
     body{ 
       font-family: "proxima-nova",
       sans-serif; margin: 0;
-      /* padding: 5px;  */
       background-color: #f0f0f0;
     }
-
-
     .list{display: block;padding: 5px;  } 
-
-
     personaje{
       display: flex;
       width: 100%;
       height: 80px;
       background-color:     white;
       box-sizing: border-box;
-      margin-bottom: 5px;
-
-
+      margin-bottom: 0px;
       border: 3px solid #e9e9e9;
-  
     }
     .thumbnail_container{  
       display: block; 
@@ -47,7 +40,7 @@
 
     .block{
       display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+/*     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  */
     gap: 5px;
     padding: 5px;  
    /* grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); */
@@ -115,136 +108,19 @@ cada 330px */
   </style>
 </head>
 <body>
-  <div style="
-  width: fit-content;
-  width: 100%;
-  box-sizing: content-box;
-  background-color: red;
-  display: block;overflow: hidden;
-"> 
-
-    <input type="text" id="buscar_personaje" placeholder="Buscar.." title="Buscar personaje" style="width: 100%;    border: 2px solid #e9e9e9; height:50px;width: -webkit-fill-available;    
-  ">
+    <!--  barra de busqueda de personaje -->
+  <div>
+    <input type="text" id="buscar_personaje" placeholder="Buscar.." title="Buscar personaje" style="width: 100%;    border: 2px solid #e9e9e9; height:50px;width: -webkit-fill-available;">
   </div>
-  
-  <div> <button id="list_btn" class="btn" onclick="cambiar_clase_personaje('lista');"> vista lista </button> 
-    <button id="block_btn" class="btn active" onclick="cambiar_clase_personaje('block');"> vista bloque </button>  </div>
- <!--  <div class="list"> -->
-  <personajes id="personajes" class="block">
-
-
-  <personaje>
-    <div class="thumbnail_container" style="background-image: url(betania_lugre.png);"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a>Betania Lugre</a> </div>
-        <div class="personaje_raza"> Humana </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-  <personaje>
-    <div class="thumbnail_container" style="background-image: url(Nael.png);"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a> Arnael </a> </div>
-        <div class="personaje_raza"> Humano </div>
-      </diV>
-    </div>
-  </personaje>
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a> Elian </a> </div>
-        <div class="personaje_raza"> Humano </div>
-      </diV>
-    </div>
-  </personaje>
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a> Nero Narven</a> </div>
-        <div class="personaje_raza"> Humano </div>
-      </diV>
-    </div>
-  </personaje>
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a> Thaiel  </a> </div>
-        <div class="personaje_raza"> Angel </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a> Asariel</a> </div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a>Nariel</a> </div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a>Personaje 7</a> </div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-
-
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a>Personaje 8</a> </div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-  <personaje>
-    <div class="thumbnail_container"></div>
-    <div class="personaje_detalles">
-      <diV class="personaje_nombre_y_raza">
-       <div class="personaje_nombre">  <a>Personaje 9</a> </div>
-        <div class="personaje_raza"> Raza </div>
-      </diV>
-    </div>
-  </personaje>
-
-</personajes>
-<!-- </div> -->
-
-
-
+   <!--  Botones de vista clase y vista lista -->
+  <div> 
+    <button id="list_btn" class="btn" onclick="cambiar_clase_personaje('lista');"> vista lista </button> 
+    <button id="block_btn" class="btn active" onclick="cambiar_clase_personaje('block');"> vista bloque </button>  
+  </div>
+ <!--  personajes -->
+  <personajes id="personajes" class="block"></personajes>
 </body>   
+
 <script>
   // tomar valor predeterminado
 if ( localStorage.julifgithubio_blog_poststyle_preference ==  undefined) {  cambiar_clase_personaje('block'); }
@@ -322,12 +198,32 @@ function cambiar_clase_personaje(valor){
   }
   </script>
 
-<!--   <script>
+  <!-- <script>
  var list = document.getElementById("personajes");
   
   var divs = list.getElementsByTagName("personaje");
 
   var detalles = divs[0].getElementsByClassName("personaje_detalles")[0].getElementsByClassName("personaje_nombre_y_raza")[0].getElementsByClassName("personaje_nombre")[0]
   console.log(detalles);
-  </script> -->
+  </script>  -->
+
+
+  <script>
+
+// <personaje>
+//     <div class="thumbnail_container" style="background-image: url(thumb_default_test.png);"></div>
+//     <div class="personaje_detalles">
+//       <diV class="personaje_nombre_y_raza">
+//        <div class="personaje_nombre">  <a>Betania Lugre</a> </div>
+//         <div class="personaje_raza"> Humana </div>
+//       </diV>
+//     </div>
+//   </personaje>
+  personajes.forEach(personaje => {
+
+document.getElementById('personajes').innerHTML += ' <personaje><div class="thumbnail_container" style="background-image: url( ' + personaje.thumb +');"></div>   <div class="personaje_detalles"> <diV class="personaje_nombre_y_raza"><div class="personaje_nombre">  <a> ' + personaje.nombre +' </a> </div> <div class="personaje_raza"> ' + personaje.raza +' </div></div></personaje>';
+
+});
+
+  </script>
 </html>
