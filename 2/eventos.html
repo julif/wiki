@@ -1,0 +1,172 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    
+    <!-- <script src="personajes.js"></script> -->
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+ linea{
+    display: flex;
+    padding: 10px;
+    background-color: #e4e7f3;
+    display: inline-flex;
+    display: -webkit-box;
+    border: 0px solid #13131878;
+    min-height: 150px;
+    min-width: -webkit-fill-available;
+    justify-content: center;
+    padding: 10px 8% 10px 8%;
+
+    overflow-y: auto;
+
+      }
+      evento {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      evento div{
+        background-color: #ffffff;
+        padding: 3px;
+        margin: 6px;
+        max-width: 150px;
+        border: 3px solid #1c3247;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 13px;
+      }
+          
+      evento::before, evento::after {
+        content: " ";
+        background-color: #1c3247;
+        height: 4px;
+        color: transparent;
+        width: 20px;
+      }
+      .first::before{ width: 0px; }
+      .last::after{ width: 0px; }
+      nota{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nota div{
+        height: 4px;
+    width: 50px;
+    background-color: #1c3247;
+    position: relative;
+      }
+      nota span{
+        position: absolute;
+        bottom: 5px;
+        color:#1c324763 ;
+        
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+
+
+      evento:first-child:before, evento:last-child:after { width: 0px; }
+
+::-webkit-scrollbar {
+
+height: 10px;
+/* background-color: #e2e8f1; */
+background-color: #0f0f15;
+background-color: #000000;
+background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+/* background-color: rgba(0, 0, 0, 0.2); */
+
+background-color:  #008ee1;
+border-radius: 3px;
+height: 2px;
+}
+
+
+    </style>
+
+</head>
+<body>
+  <sidebar> 
+    <img src="logo_3.png">
+    <sidebar_nav>
+        <a href="index.html" > Inicio </a> 
+        <a href="personajes.html" > Personajes </a> 
+        <a href="eventos.html" class="active" > Eventos </a> 
+    </sidebar_nav>
+    <separador></separador>
+  </sidebar>
+    <main>
+        <div>
+            <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
+                <i class="ri-menu-line ri-xl"></i>
+            </a>
+            <h1 style="margin-bottom: 0;"> eventos </h1>
+            <p> eventos importantes de la linea de tiempo </p>
+            <h3>Linea de tiempo </h3>
+<div id="sobre_linea"> 
+            <linea  id="contenedor" class="full">
+                <evento class="first"><div> evento 1 </div></evento> 
+                <nota> <div> <span>texto</span></div> </nota>
+                <evento ><div> evento 2 </div></evento> 
+                <evento><div> evento 3 </div></evento> 
+                <evento class="last"><div> evento 4 </div></evento> 
+          
+              </linea>
+            </div>
+        </div>
+
+    </main>
+    <footer> proyecto sin nombre - © Julian Filardi </footer>
+<!--     <script>
+        personajes.forEach(personaje => {
+          document.getElementById('personajes_tabla').innerHTML += '     <tr><td>' + personaje.nombre +'</td><td>' + personaje.raza +'</td></tr>';
+        });
+    </script>
+        <script>
+            personajes.forEach(personaje => {
+              document.getElementById('personajes_lista').innerHTML += ' <li><a target="_blank" href="https://github.com/azouaoui-med/css-pro-layout">' + personaje.nombre +'</a></li>';
+            });
+        </script> -->
+        <script>
+    
+            const slider = document.querySelector('#contenedor');
+            let mouseDown = false;
+            let startX, scrollLeft;
+            
+            let startDragging = function (e) {
+              mouseDown = true;
+              startX = e.pageX - slider.offsetLeft;
+              scrollLeft = slider.scrollLeft;
+            };
+            let stopDragging = function (event) {
+              mouseDown = false;
+            };
+            
+            slider.addEventListener('mousemove', (e) => {
+              e.preventDefault();
+              if(!mouseDown) { return; }
+              const x = e.pageX - slider.offsetLeft;
+              const scroll = x - startX;
+              slider.scrollLeft = scrollLeft - scroll;
+            });
+            
+            // Add the event listeners
+            slider.addEventListener('mousedown', startDragging, false);
+            slider.addEventListener('mouseup', stopDragging, false);
+            slider.addEventListener('mouseleave', stopDragging, false);
+            
+            </script>
+</body>

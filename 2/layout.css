@@ -1,0 +1,33 @@
+:root {--sidebar_width: 300px;}
+body{ 
+  margin: 0;
+  min-height: 100vh; /*por si no funciona el 100dvh */
+  min-height: 100dvh;  
+  display: grid;
+  grid-template-rows: 1fr auto; 
+}
+main{
+  margin-left:  var(--sidebar_width);
+  transition:  margin-left 1s;
+}
+footer{
+  padding-left: var(--sidebar_width);
+  transition:    padding-left 1s;
+}
+
+sidebar{
+  position: fixed;
+  width: var(--sidebar_width);
+  height: 100%;
+  left: 0px;    transition: left 1s;
+}
+
+
+@media (max-width: 664px) {
+  sidebar{ left: calc(var(--sidebar_width) * -1); /* numero negativo de la variable css */  } 
+
+  
+  main{  margin-left: 0px;    padding: 10px 35px;}
+  footer{  padding-left: 0px;}
+ 
+}

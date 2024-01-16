@@ -1,54 +1,29 @@
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <script src="personajes.js"></script>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            font-family: "Poppins", sans-serif;
-            color: #3f4750;
-            font-size: 0.9rem;    
-        }
-        main{padding: 12px 50px;}
-        h1,h2{color: black;}
-        a {text-decoration: none;}
-    </style>
-    <style>
+    <!-- <script src="personajes.js"></script> -->
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <style></style>
 
-/* td {
-    border: 1px solid;
-    padding: 0px 9px;
-} */
-
-
-table {
-          width: 100%;
-          border-collapse: collapse;
-          background: white;
-
-        
-      }
-      th, td {
-        border: 1px solid #000000;
-          text-align: center; 
-          padding: 8px;
-      }
-      th {
-        background-color: #28272c;
-    color: white;
-      }
-     /*  tr:nth-child(even) {background-color: #f2f2f2;} */
-    </style>
 </head>
 <body>
+  <sidebar> 
+    <sidebar_nav>
+        <a href="#" class="active"> Inicio </a> 
+        <a href="personajes.html"> Personajes </a> 
+    </sidebar_nav>
+  </sidebar>
     <main>
         <div>
             <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
                 <i class="ri-menu-line ri-xl"></i>
             </a>
-            <h1 style="margin-bottom: 0;">Pro Sidebar</h1>
+            <h1 style="margin-bottom: 0;"> Proyecto sin nombre </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque nisl vitae gravida tempus. Duis quis lacinia mauris. Nam ac lobortis est. Donec ac orci vel ex ultrices accumsan id eget justo. Mauris non hendrerit neque. In pulvinar augue at urna scelerisque interdum. Cras in blandit nisl, vel fringilla lacus. Morbi vehicula felis ut mauris euismod, vel finibus dolor semper. Maecenas eu efficitur nisi. Praesent risus magna, blandit at tincidunt eget, dapibus eu nisl. Duis vitae risus aliquet, volutpat tellus vel, volutpat mi. Cras enim neque, laoreet non consectetur at, ultricies ut ipsum. Mauris interdum dui enim, in volutpat tortor egestas sollicitudin.</p>
             <span style="display: inline-block">
                 Responsive layout with advanced sidebar menu built with SCSS and vanilla Javascript
             </span>
@@ -57,31 +32,27 @@ table {
                 Full Code and documentation available on
                 <a href="https://github.com/azouaoui-med/pro-sidebar-template" target="_blank">Github</a>
             </span>
+            <separador></separador>
         </div>
         <div>
             <h2>Razas</h2>
             <ul>
                 <li>Entidad cosmica</li>
-                <li>Elfo celestial</li>
+                <!-- <li>Elfo celestial</li> -->
             </ul>
         </div>
         <div>
             <h2>Personajes</h2>
-            <ul id="personajes_lista"></ul>
-            <h2>Tabla de personajes </h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>raza</th>
-                    </tr>
-                </thead>
-                <tbody id="personajes_tabla"></tbody>
-            </table>
+            <ul id="personajes_lista">
+                <li>Oroboros</li>
+            </ul>
+
+
         </div>
 
     </main>
-    <script>
+    <footer> proyecto sin nombre - © Julian Filardi </footer>
+<!--     <script>
         personajes.forEach(personaje => {
           document.getElementById('personajes_tabla').innerHTML += '     <tr><td>' + personaje.nombre +'</td><td>' + personaje.raza +'</td></tr>';
         });
@@ -90,5 +61,5 @@ table {
             personajes.forEach(personaje => {
               document.getElementById('personajes_lista').innerHTML += ' <li><a target="_blank" href="https://github.com/azouaoui-med/css-pro-layout">' + personaje.nombre +'</a></li>';
             });
-        </script>
+        </script> -->
 </body>

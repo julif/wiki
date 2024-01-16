@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <!-- <script src="personajes.js"></script> -->
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <style></style>
+
+</head>
+<body>
+  <sidebar> 
+    <style>
+        .sidebar-header {
+    height: 100px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; justify-content: center; background-color: #171723;    background-color: #000000;
+}
+ .pro-sidebar-logo {
+    display: flex;
+    align-items: center;   
+}
+.pro-sidebar-logo > div {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    background-color:  #2097ea;
+    margin-right: 8px;
+} 
+.pro-sidebar-logo > h5 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    line-height: 30px;
+    transition: opacity 0.3s;
+    color: #fefefe;
+    opacity: 1;
+}
+    </style>
+<!--     <div class="sidebar-header">
+     <div class="pro-sidebar-logo">
+          <div>P</div>
+        <h5>Proyecto sin Nombre</h5> 
+        </div> 
+      </div> -->
+      <img src="logo_3.png">
+    <sidebar_nav>
+        <a href="#" class="active"> Inicio </a> 
+        <a href="personajes.html"> Personajes </a> 
+        <a href="eventos.html" > Eventos </a> 
+    </sidebar_nav> <separador></separador>
+  </sidebar>
+    <main>
+        <div>
+            <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
+                <i class="ri-menu-line ri-xl"></i>
+            </a>
+            <h1 style="margin-bottom: 0;"> Proyecto sin nombre </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque nisl vitae gravida tempus. Duis quis lacinia mauris. Nam ac lobortis est. Donec ac orci vel ex ultrices accumsan id eget justo. Mauris non hendrerit neque. In pulvinar augue at urna scelerisque interdum. Cras in blandit nisl, vel fringilla lacus. Morbi vehicula felis ut mauris euismod, vel finibus dolor semper. Maecenas eu efficitur nisi. Praesent risus magna, blandit at tincidunt eget, dapibus eu nisl. Duis vitae risus aliquet, volutpat tellus vel, volutpat mi. Cras enim neque, laoreet non consectetur at, ultricies ut ipsum. Mauris interdum dui enim, in volutpat tortor egestas sollicitudin.</p>
+            <span style="display: inline-block">
+                Responsive layout with advanced sidebar menu built with SCSS and vanilla Javascript
+            </span>
+            <br>
+            <span>
+                Full Code and documentation available on
+                <a href="https://github.com/azouaoui-med/pro-sidebar-template" target="_blank">Github</a>
+            </span>
+            <separador></separador>
+        </div>
+        <div>
+            <h2>Razas</h2>
+            <ul>
+                <li>Entidad cosmica</li>
+                <!-- <li>Elfo celestial</li> -->
+            </ul>
+        </div>
+        <div>
+            <h2>Personajes</h2>
+            <ul id="personajes_lista">
+                <li>Oroboros</li>
+            </ul>
+
+
+        </div>
+
+    </main>
+    <footer> proyecto sin nombre - © Julian Filardi </footer>
+<!--     <script>
+        personajes.forEach(personaje => {
+          document.getElementById('personajes_tabla').innerHTML += '     <tr><td>' + personaje.nombre +'</td><td>' + personaje.raza +'</td></tr>';
+        });
+    </script>
+        <script>
+            personajes.forEach(personaje => {
+              document.getElementById('personajes_lista').innerHTML += ' <li><a target="_blank" href="https://github.com/azouaoui-med/css-pro-layout">' + personaje.nombre +'</a></li>';
+            });
+        </script> -->
+</body>
+</html>
