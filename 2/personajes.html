@@ -1,45 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <!-- <script src="personajes.js"></script> -->
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="style.css">
     <style></style>
-
 </head>
 <body>
-  <sidebar>  <img src="logo_3.png">
-    <sidebar_nav>
-        <a href="index.html" > Inicio </a> 
-        <a href="#" class="active"> Personajes </a> 
-        <a href="eventos.html" > Eventos </a> 
-    </sidebar_nav><separador></separador>
-  </sidebar>
+    <sidebar> 
+        <img src="logo_3.png">
+        <sidebar_nav>
+            <a href="index.html"> <img src="inicio.svg">  Inicio </a> 
+            <a href="personajes.html"  class="active"> <img src="personajes_2.svg">  Personajes </a> 
+            <a href="eventos.html" > <img src="eventos_3.svg"> Eventos </a> 
+        </sidebar_nav> 
+        <separador></separador>
+    </sidebar>
     <main>
         <div>
-            <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
-                <i class="ri-menu-line ri-xl"></i>
-            </a>
             <h1 style="margin-bottom: 0;"> Personajes </h1>
             <ul id="personajes_lista">
-                <li>Oroboros</li>
+                <li> <a href="personajes/oroboros.html">Oroboros</a></li>
+                <li> <a href="personajes/oroboros.html">Asariel</a></li>
+                <li> <a href="personajes/oroboros.html">Theia</a></li>
+                <li> <a href="personajes/oroboros.html">Nariel</a></li>
             </ul>
-
-
         </div>
-
     </main>
     <footer> proyecto sin nombre - © Julian Filardi </footer>
-<!--     <script>
-        personajes.forEach(personaje => {
-          document.getElementById('personajes_tabla').innerHTML += '     <tr><td>' + personaje.nombre +'</td><td>' + personaje.raza +'</td></tr>';
-        });
-    </script>
-        <script>
-            personajes.forEach(personaje => {
-              document.getElementById('personajes_lista').innerHTML += ' <li><a target="_blank" href="https://github.com/azouaoui-med/css-pro-layout">' + personaje.nombre +'</a></li>';
-            });
-        </script> -->
 </body>
+</html>

@@ -1,26 +1,14 @@
 
-@font-face {
-  font-family: Poppins;
-  src: url(Poppins.ttf);
-}
-
 body{ 
-
   background-color: white;
- /*   font-family: "Poppins", sans-serif;  */
-
   color: #626970;
+  font-family: system-ui; 
   font-size: 0.95rem; 
   font-size: 16px; 
   font-weight: 600;    
-
-   font-family: system-ui; 
 }
-
-
-main{  padding: 12px 50px;
-
-
+main{  
+  padding: 12px 50px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -36,7 +24,6 @@ main separador {
 .full{
   margin: -0px -50px;
 }
-
 h1,h2{color: black;}
 a {text-decoration: none;}
 footer{
@@ -47,15 +34,26 @@ footer{
   border-top: 4px solid #9899a030;
 }
 sidebar{
-  background-color: #0d0d11;
   background-color:  #202033;
-
 }
 sidebar img{
   padding: 20px;
-    width: -webkit-fill-available;
-    padding-bottom: 0; 
-    mix-blend-mode: overlay;
+  width: -webkit-fill-available;
+  padding-bottom: 0; 
+  mix-blend-mode: overlay;
+}
+
+sidebar_nav  img{
+  width: 22px;
+  padding-bottom: 0;
+  mix-blend-mode: inherit;
+
+  padding: 0;
+  margin-right: 15px;
+
+/* 
+  filter: saturate(0) invert(1) brightness(1); */
+
 
 }
 sidebar separador {
@@ -69,26 +67,28 @@ sidebar separador {
 sidebar_nav{
   display: block;
   padding: 13px;
-  /* width: 67%; */
-  /* display: inline; */
   box-sizing: content-box;
-  /* margin: 11px;*/margin-top: 20px;
+  margin-top: 20px;
 }
-
 sidebar_nav a{
- 
-    /* width: 100%; */
-    display: block;
-    /* background-color: black; */
-    padding: 9px;
-    margin-bottom: 7px;
-    box-sizing: border-box;
-    color: #ffffff7d;    border-radius: 5px;
-    padding-left: 30px;    color: #71719e;
-
+  display: block;
+  padding: 9px;
+  margin-bottom: 7px;
+  box-sizing: border-box;
+  color: #ffffff7d;    
+  border-radius: 3px;
+  padding-left: 15px;    
+  color: #71719e;
+  display: flex;
+  align-items: center;
 }
-sidebar_nav .active{     background-color: #2097ea;
-  color: white;}
+sidebar_nav .active{     
+  background-color: #2097ea;
+  color: white;
+}
+/* sidebar_nav .active img{
+  filter:  invert(1)  brightness(10);
+} */
 sidebar_nav a:not(.active):hover{color: white;     background-color: #18182b;}
 
 /* -------------- Media query  -----------------*/
