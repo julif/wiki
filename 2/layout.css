@@ -16,21 +16,21 @@ main{
   margin-left:  var(--sidebar_width);
   transition:  margin-left  var(--tiempo);
 }
-.closed_sidebar main{
+/* .closed_sidebar main{
   margin-left:  var(--closed_sidebar_width); 
   transition:  margin-left  var(--tiempo);
 }
- 
+  */
 
 footer{
   padding-left: var(--sidebar_width);
   transition:    padding-left 1s;
 }
- .closed_sidebar footer{
+/*  .closed_sidebar footer{
   padding-left: var(--closed_sidebar_width);
   transition:    padding-left  var(--tiempo) ;
 }
-
+ */
  
 
 sidebar{
@@ -45,16 +45,16 @@ sidebar span{ opacity: 1; transition: opacity 1s; user-select: inherit;}
 
 sidebar span{ opacity: 1; transition: opacity 1s; user-select: inherit;}
 
- .closed_sidebar sidebar{
+/*  .closed_sidebar sidebar{
   position: fixed;
   width: var(--closed_sidebar_width);
   height: 100%;
   left: 0px;    
   transition: left 1s, width  var(--tiempo);
  
-}
-.closed_sidebar sidebar span{ opacity: 0; transition: opacity var(--tiempo); user-select: none; width: 0;}
- 
+} */
+/* .closed_sidebar sidebar span{ opacity: 0; transition: opacity var(--tiempo); user-select: none; width: 0;}
+  */
 
 main nav{
   margin: -12px -50px;
@@ -72,21 +72,60 @@ main nav{
 
 }
 
-@media (max-width: 900px) {
-  sidebar{ left: calc(var(--sidebar_width) * -1);  } 
-  .closed_sidebar sidebar{ left: calc(var(--closed_sidebar_width) * -1);  } 
-  main{  margin-left: 0px;    padding: 10px 35px;}
-  .closed_sidebar main{  margin-left: 0px;    padding: 10px 35px;}
-  footer{  padding-left: 0px;}
-  .closed_sidebar footer{  padding-left: 0px;}
 
+
+
+
+
+
+/* @media (max-width: 1000px) {
+  sidebar{
+    position: fixed;
+    width: var(--closed_sidebar_width);
+    height: 100%;
+    left: 0px;    
+    transition: left 1s, width  var(--tiempo);
+   
+  } 
+  sidebar span{ opacity: 0; transition: opacity var(--tiempo); user-select: none; width: 0;}
+
+
+
+
+
+  main{  margin-left: 0px;    padding: 10px 35px;}
+
+main{
+  margin-left:  var(--closed_sidebar_width); 
+  transition:  margin-left  var(--tiempo);
+}
   main nav{
-    margin-top: -9px;
+    margin-top: -71px;
   }
+  footer{
+    padding-left: var(--closed_sidebar_width);
+    transition:    padding-left  var(--tiempo) ;
+  }
+}
+ */
+
+
+
+
+/* 
+
+
+
+@media (orientation: landscape)  and (min-device-width: 700px) 
+and (max-device-width: 670px){
+
+  sidebar{ left: calc(var(--sidebar_width) * -1);  } 
+  main{  margin-left: 0px;    padding: 10px 35px;}
+  footer{  padding-left: 0px;}
   main nav{
     margin: -12px -40px;
   }
-}
+} 
 
 
 @media (orientation: landscape)  and (min-device-width: 480px) 
@@ -97,21 +136,17 @@ and (orientation: landscape) {
   main{  margin-left: 0px;    padding: 10px 35px;}
   footer{  padding-left: 0px;}
 
-
-  .closed_sidebar sidebar{ left: calc(var(--closed_sidebar_width) * -1);  } 
-  .closed_sidebar main{  margin-left: 0px;    padding: 10px 35px;}
-  .closed_sidebar footer{  padding-left: 0px;}
   main nav{
     margin: -12px -40px;
   }
 } 
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
-  sidebar{ left: calc(var(--sidebar_width) * -1); /* numero negativo de la variable css */  } 
+  sidebar{ left: calc(var(--sidebar_width) * -1);   } 
   main{  margin-left: 0px;    padding: 10px 35px;}
-  .closed_sidebar main{  margin-left: 0px;    padding: 10px 35px;}
+
   footer{  padding-left: 0px;}
-  .closed_sidebar footer{  padding-left: 0px;}
+
 
   main nav{
     margin-top: -9px;
@@ -121,3 +156,22 @@ and (orientation: landscape) {
   }
   }
 
+ */
+
+ /* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width:1000px) {
+  sidebar{width: var(--closed_sidebar_width);}
+  sidebar span{ opacity: 0; transition: opacity var(--tiempo); user-select: none; width: 0;}
+  main {
+    margin-left: var(--closed_sidebar_width);}
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  sidebar{ left: calc(var(--closed_sidebar_width) * -1); }
+  main nav {margin-top: -9px;}
+  main {
+    margin-left: 0px;}
+
+
+}
