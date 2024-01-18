@@ -13,6 +13,19 @@ main{
   flex-direction: column;
   overflow: hidden;
 }
+main nav{
+  margin: -12px -50px;
+  /* background-color: red; */
+  padding: 17px;
+  border-bottom: 3px solid #ececed;
+}
+main nav a{
+  padding: 18px;
+}
+main nav .active{
+  border-bottom: 3px solid #2097ea;
+}
+
 main separador {
   display: block;
   height: 3px;
@@ -72,7 +85,8 @@ sidebar_nav{
 }
 sidebar_nav a{
   display: block;
-  padding: 9px;
+  /* padding: 9px; */
+  padding: 15px 10px;
   margin-bottom: 7px;
   box-sizing: border-box;
   color: #ffffff7d;    
