@@ -21,13 +21,23 @@ main nav a{
 }
 
 main nav a:not(.active):hover{ color: black;}
-main nav .active{
-  border-bottom: 3px solid #2097ea;
 
-  color: #2097ea;
+main nav a:not(.active):hover{ color: white;}
+main nav .active{
+  border-bottom: 3px solid #0184df;
+
+  color: #0184df;
+
+  
 
 }
 
+
+main nav{
+  background-color: #202033;
+  border-bottom: 3px solid #202033;
+}
+main nav a{    color: #71719e;}
 main separador {
   display: block;
   height: 3px;
@@ -85,7 +95,7 @@ sidebar_nav{
   display: block;
   padding: 13px;
   box-sizing: content-box;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 sidebar_nav a{
   display: block;
@@ -102,6 +112,8 @@ sidebar_nav a{
 }
 sidebar_nav .active{     
   background-color: #2097ea;
+  background-color: #0184df;
+  
   color: white;
 }
 /* sidebar_nav .active img{

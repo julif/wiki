@@ -12,15 +12,53 @@
   filter: invert(1);
 
 }
+.white_sidenav  sidebar_nav a{
+    color: #a4a4ae;
+}
 
+
+.white_sidenav  sidebar {
+    background-color:  #ffffff;
+    /* border-right: solid #ececed 4px; */
+}
+.white_sidenav  sidebar_nav .active {
+    background-color: #58baff;
+    background-color: #15212a;
+    color: white;
+}
+
+
+    .white_sidenav sidebar_nav a:not(.active):hover {
+    color: #040404;
+    background-color: #d1d8e875;
+}
+/* .white_sidenav sidebar_nav a img:not(.active){  filter: saturate(0) invert(1) brightness(1);} */
+
+.white_sidenav sidebar_nav  img{  filter: saturate(0) invert(1) brightness(1);} 
+.white_sidenav sidebar_nav  .active img{  filter: saturate(0) invert(0) brightness(1);} 
+
+
+.white_sidenav sidebar separador {background-color: #0000000f;}
+
+.white_sidenav h1 {border-bottom: solid #0000000f 3px;}
+
+h1 {border-bottom: solid #0000000f 3px; margin-bottom: 0px;}
+
+.white_sidenav footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+     color: #868686; 
+    border-top: 4px solid #0000000f;
+}
    </style>
     <script>
         
     </script>
 </head>
-<body>
+<body >
     <sidebar> 
-        <img src="logo_3.png">
+        <!-- <img src="logo_3.png"> -->
         <sidebar_nav>
             <a href="index.html" class="active"> <img src="inicio.svg">  Inicio </a> 
             <a href="personajes.html"> <img src="personajes_2.svg">  Personajes </a> 
