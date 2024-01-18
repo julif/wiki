@@ -9,7 +9,12 @@
           content {
 background-color: white;
 
-max-width: 64rem;
+/* max-width: 64rem; */
+
+
+
+
+
 /* padding: 50px; */
 margin: 0 auto;
 /* font-size: 1.1rem; */
@@ -22,14 +27,17 @@ margin-bottom: 20px; */
 }
 aside{
 width: 300px;
-background-color: #F0F0F0;
-background-color: #f1f3f4;
+background-color: #ffffff;
+/* background-color: #f1f3f4; */
 min-height: 200px;
 float: right;
 margin: 20px;
 margin-top: 0px;
 margin-right: 0px;
 border: 1px solid black;
+}
+#aside_img{
+    margin-bottom: -4px;
 }
 aside img{
 width: 100%;
@@ -80,13 +88,14 @@ aside section div { width: 60%; }
 background-color: #181818;
 padding: 6px;
 color: white;
+display: none;
 
 }
 
 
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
 
 aside{
 width: 100%;
@@ -107,6 +116,26 @@ margin: 5px;
 
 
 }
+
+
+.contenedor_imagen{
+   /*  background-color: red;  */
+            display: flex;
+            justify-content: center;
+            width: -webkit-fill-available;
+}
+.contenedor_imagen img{
+    width: auto;
+    max-width: 100%;
+}
+
+
+
+
+/* @media screen and (max-width: 600px) {
+    .contenedor_imagen img{width: 100%;}
+
+} */
     </style>
 </head>
 <body>
@@ -128,14 +157,17 @@ margin: 5px;
             <h1> Oroboros </h1>  
             <aside>
               <div id="aside_name">  Oroboros </div>
-              <img src="001.png">
+              <div id="aside_img">
+                <img src="001.png">
+              </div>
+             
               
               <section> 
                 <h3> Nombres </h3><div> 
                   <p> Oroboros </p>
                   <p> la serpiente blanca </p>
                   <p> la gran serpiente </p>
-                  <p> la gran bestia del vacio </p>
+                  <p style="margin-bottom: 20px;"> la gran bestia del vacio </p>
                 </div>
               </section>
               <section> 
@@ -165,17 +197,20 @@ margin: 5px;
               </section>
             </aside>
             <p>
-              <b> Oroboros </b> es la manifestacion fisica de la nada, en el big-bang  el vacio descubrio sus propios limites y tomo conciencia de si mismo, su unico deseo es volver a ser todo lo que existe y dormir hasta olvidarse olvidarse de su propia conciencia.
+              <b> Oroboros </b> es la manifestacion de el vacio, en el big-bang creo una forma fisica y  tomo conciencia de si mismo, su unico deseo es volver a ser todo lo que existe y dormir hasta olvidarse olvidarse de su propia conciencia.
             </p>
             <h2> historia </h2>
+        
             <p>
               La luz del big-bang no solo hizo que la serpiente tomara forma, tambien la dejo ciega y la obligo a retirarse a los confines de el universo por eones, una vez que recupero la vista comenzo a destruir todo a su paso hasta que se topo con las 3 encarnaciones de la luz.
             </p>
             <p>
               La serpiente se efrento a los angeles con todo su poder pero se vio en desventaja, los angeles se dieron cuenta de que era imposible destruir del todo a la oscuridad asi que la encerraron en una prision llamada Kasedrim
             </p>
+          
             <h2>El plan de la serpiente</h2>
             <p> Mientras estuvo encerrada la serpiente ideo un plan para escapar mientras los 2 angeles luchaban en el flujo de el tiempo contra su hermano caido</p>
+          <div class="contenedor_imagen"> <img src="../placeholder.png"  style=""> </div>
             <h2>Characteristics</h2>
             <h3>Personality</h3>
             <h3>Abilities</h3>
