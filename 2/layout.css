@@ -22,11 +22,31 @@ sidebar{
   left: 0px;    transition: left 1s;
 }
 
+main nav{
+  margin: -12px -50px;
+  background-color: white;
+  padding: 17px;
+  border-bottom: 3px solid #ececed;
+  margin-bottom: 0px;
+  /* display: none; */
+  z-index: 1;
+}
+main nav{
+  margin-top: -71px;
+  transition:  margin-top 1s;
+  transition-delay: 0.8s;
 
-@media (max-width: 664px) {
+}
+
+@media (max-width: 900px) {
   sidebar{ left: calc(var(--sidebar_width) * -1); /* numero negativo de la variable css */  } 
   main{  margin-left: 0px;    padding: 10px 35px;}
   footer{  padding-left: 0px;}
+
+
+  main nav{
+    margin-top: -12px;
+  }
 }
 
 
@@ -43,4 +63,10 @@ and (orientation: landscape) {
   sidebar{ left: calc(var(--sidebar_width) * -1); /* numero negativo de la variable css */  } 
   main{  margin-left: 0px;    padding: 10px 35px;}
   footer{  padding-left: 0px;}
+
+
+  main nav{
+    margin-top: -12px;
+  }
+
   }

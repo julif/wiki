@@ -13,15 +13,7 @@ main{
   flex-direction: column;
   overflow: hidden;
 }
-main nav{
-  margin: -12px -50px;
-  background-color: white;
-  padding: 17px;
-  border-bottom: 3px solid #ececed;
-  margin-bottom: 0px;
-  /* display: none; */
-  z-index: 1;
-}
+
 main nav a{
   padding: 17px;
 
@@ -48,7 +40,7 @@ main separador {
   margin: -0px -50px;
 }
 
-h1{font-size: 40px;}
+h1{font-size: 40px;     border-bottom: solid #ececed 3px;}
 h1,h2{color: black;}
 a {text-decoration: none;}
 footer{
@@ -132,6 +124,7 @@ banner{
   justify-content: center;
   align-items: center;
   padding: 70px;
+  display: none;
 }
 banner h1{
   text-align: center;
