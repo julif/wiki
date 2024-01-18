@@ -249,8 +249,10 @@
     mask-size: cover;
     background-color: var(--swiffy-slider-nav-light);
     background-origin: content-box;
-    width: 3rem;
-    height: 3rem;
+   /*  width: 3rem;
+    height: 3rem; */
+    width: 25px;
+    height: 27px;
 }
 
 .slider-nav-arrow .slider-nav::after {

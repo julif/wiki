@@ -243,3 +243,23 @@ sidebar_nav a:hover img{
 /*   background-color: red; */
   position: absolute;
 }
+
+
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+ 
+}
+
+::-webkit-scrollbar-thumb {
+  /* background: rgba(90, 90, 90); */
+  background:  #6e6e6e7a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  background: transparent;
+}

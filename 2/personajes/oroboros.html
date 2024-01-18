@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="../layout.css">
     <link rel="stylesheet" href="../style.css">
+
+    <script src="../swiffy-slider.min.js"></script>
+    <link rel="stylesheet" href="../swiffy-slider.css">
     <style>
           content {
 background-color: white;
@@ -37,7 +40,7 @@ margin-right: 0px;
 border: 1px solid black;
 }
 #aside_img{
-    margin-bottom: -4px;
+    margin-bottom: -4px; 
 }
 aside img{
 width: 100%;
@@ -144,6 +147,9 @@ margin: 5px;
             <a href="../index.html" > <img src='../img/svg/inicio.svg'><span>  Inicio </span> </a> 
             <a href="../personajes.html" class="active"> <img src='../img/svg/personajes_2.svg'> <span>  Personajes </span>  </a> 
             <a href="../eventos.html" ><img src='../img/svg/eventos_3.svg'>  <span> Eventos </span> </a> 
+
+
+        
         </sidebar_nav> 
         <separador></separador>
     </sidebar>
@@ -158,7 +164,25 @@ margin: 5px;
             <aside>
               <div id="aside_name">  Oroboros </div>
               <div id="aside_img">
-                <img src="001.png">
+              <!--   <img src="oroboros_2.png"> -->
+              <div id="slide_2" class="swiffy-slider" style="
+        background-color: #dedede;">
+            <ul class="slider-container">
+                <li> <div> <img  src="oroboros_1.png"> </div></li>
+                <li><div> <img  src="oroboros_2.png"> </div></li>
+           
+            </ul>
+     
+        
+            <button type="button" class="slider-nav"></button>
+            <button type="button" class="slider-nav slider-nav-next"></button> 
+        
+            <div class="slider-indicators">
+                <button class="active"></button>
+                <button class=""></button>
+               
+            </div>
+        </div>
               </div>
              
               
@@ -210,7 +234,7 @@ margin: 5px;
           
             <h2>El plan de la serpiente</h2>
             <p> Mientras estuvo encerrada la serpiente ideo un plan para escapar mientras los 2 angeles luchaban en el flujo de el tiempo contra su hermano caido</p>
-          <div class="contenedor_imagen"> <img src="../placeholder.png"  style=""> </div>
+          <div class="contenedor_imagen"> <img src="../placeholder.png"  > </div>
             <h2>Characteristics</h2>
             <h3>Personality</h3>
             <h3>Abilities</h3>
