@@ -77,9 +77,12 @@ main nav{
   .closed_sidebar main{  margin-left: 0px;    padding: 10px 35px;}
   footer{  padding-left: 0px;}
   .closed_sidebar footer{  padding-left: 0px;}
-  
+
   main nav{
-    margin-top: -12px;
+    margin-top: -9px;
+  }
+  main nav{
+    margin: -12px -40px;
   }
 }
 
@@ -89,11 +92,16 @@ and (max-device-width: 670px)
 and (orientation: landscape) {
 
   sidebar{ left: calc(var(--sidebar_width) * -1);  } 
-  .closed_sidebar sidebar{ left: calc(var(--closed_sidebar_width) * -1);  } 
   main{  margin-left: 0px;    padding: 10px 35px;}
-  .closed_sidebar main{  margin-left: 0px;    padding: 10px 35px;}
   footer{  padding-left: 0px;}
+
+
+  .closed_sidebar sidebar{ left: calc(var(--closed_sidebar_width) * -1);  } 
+  .closed_sidebar main{  margin-left: 0px;    padding: 10px 35px;}
   .closed_sidebar footer{  padding-left: 0px;}
+  main nav{
+    margin: -12px -40px;
+  }
 } 
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
@@ -104,7 +112,10 @@ and (orientation: landscape) {
   .closed_sidebar footer{  padding-left: 0px;}
 
   main nav{
-    margin-top: -12px;
+    margin-top: -9px;
+  }
+  main nav{
+    margin: -12px -50px;
+  }
   }
 
-  }

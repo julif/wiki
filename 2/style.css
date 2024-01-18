@@ -179,7 +179,7 @@ sidebar_nav a:hover img{
 /*   background-color: black; */
   position: absolute;
   width: 100%;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   height: 70px;
@@ -217,12 +217,13 @@ sidebar_nav a:hover img{
   justify-content: center;
   transition: all 1s;
   width: 100%;
-  background-color: #131321;
+/*   background-color: #131321; */
  
 }
 .closed_sidebar #coso img{
 
   transform: rotateZ( 0deg);
+  /* filter: none; */
  
 }
 
