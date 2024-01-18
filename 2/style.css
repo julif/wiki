@@ -15,15 +15,25 @@ main{
 }
 main nav{
   margin: -12px -50px;
-  /* background-color: red; */
+  background-color: white;
   padding: 17px;
   border-bottom: 3px solid #ececed;
+  margin-bottom: 0px;
+  /* display: none; */
+  z-index: 1;
 }
 main nav a{
-  padding: 18px;
+  padding: 17px;
+
+  color: #b5b5b5;
 }
+
+main nav a:not(.active):hover{ color: black;}
 main nav .active{
   border-bottom: 3px solid #2097ea;
+
+  color: #2097ea;
+
 }
 
 main separador {
@@ -37,6 +47,8 @@ main separador {
 .full{
   margin: -0px -50px;
 }
+
+h1{font-size: 40px;}
 h1,h2{color: black;}
 a {text-decoration: none;}
 footer{
@@ -109,4 +121,18 @@ sidebar_nav a:not(.active):hover{color: white;     background-color: #18182b;}
 @media (max-width: 664px) {
   main{  padding: 10px 35px;} 
   .full{  margin: 0px -35px;}
+}
+
+
+banner{
+  margin: -11px -50px 0px;
+  background-color: #eeeeee;
+  /* min-height: 250px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+}
+banner h1{
+  text-align: center;
 }
