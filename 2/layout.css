@@ -14,11 +14,11 @@ body{
 }
 main{
   margin-left:  var(--sidebar_width);
-  transition:  margin-left 1s;
+  transition:  margin-left  var(--tiempo);
 }
 .closed_sidebar main{
   margin-left:  var(--closed_sidebar_width); 
-  transition:  margin-left 1s;
+  transition:  margin-left  var(--tiempo);
 }
  
 
@@ -28,7 +28,7 @@ footer{
 }
  .closed_sidebar footer{
   padding-left: var(--closed_sidebar_width);
-  transition:    padding-left 1s;
+  transition:    padding-left  var(--tiempo) ;
 }
 
  
@@ -41,17 +41,19 @@ sidebar{
   transition: left 1s, width 1s;
   overflow: hidden;
 }
-sidebar span{ opacity: 1;transition: opacity 1s;user-select: inherit;}
+sidebar span{ opacity: 1; transition: opacity 1s; user-select: inherit;}
+
+sidebar span{ opacity: 1; transition: opacity 1s; user-select: inherit;}
 
  .closed_sidebar sidebar{
   position: fixed;
   width: var(--closed_sidebar_width);
   height: 100%;
   left: 0px;    
-  transition: left 1s, width 1s;
+  transition: left 1s, width  var(--tiempo);
  
 }
-.closed_sidebar sidebar span{ opacity: 0;transition: opacity 1s; user-select: none; width: 0;}
+.closed_sidebar sidebar span{ opacity: 0; transition: opacity var(--tiempo); user-select: none; width: 0;}
  
 
 main nav{
