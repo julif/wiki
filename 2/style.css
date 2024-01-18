@@ -21,8 +21,8 @@ main nav a{
 }
 
 main nav a:not(.active):hover{ color: black;}
-
-main nav a:not(.active):hover{ color: white;}
+/* 
+main nav a:not(.active):hover{ color: white;} */
 main nav .active{
   border-bottom: 3px solid #0184df;
 
@@ -33,11 +33,11 @@ main nav .active{
 }
 
 
-main nav{
+/* main nav{
   background-color: #202033;
   border-bottom: 3px solid #202033;
 }
-main nav a{    color: #71719e;}
+main nav a{    color: #71719e;} */
 main separador {
   display: block;
   height: 3px;
@@ -63,13 +63,13 @@ footer{
 sidebar{
   background-color:  #202033;
 }
-sidebar img{
+/* sidebar img{
   padding: 20px;
   width: -webkit-fill-available;
   padding-bottom: 0; 
   mix-blend-mode: overlay;
 }
-
+ */
 sidebar_nav  img{
   width: 22px;
   padding-bottom: 0;
@@ -140,4 +140,105 @@ banner{
 }
 banner h1{
   text-align: center;
+}
+
+
+
+sidebar_nav a:hover img{ 
+  animation: icon_shake 0.5s;
+  animation-iteration-count: 1;
+  /* animation-duration: 750ms; */
+}
+/* sidebar_nav a:not(.active):hover img{ 
+  animation: icon_shake 0.5s;
+  animation-iteration-count: 1;
+
+} */
+
+
+@keyframes icon_shake {
+
+   0% { transform: translate(1px, 1px) rotate(0deg); }
+  25% { transform: translate(-1px, -2px) rotate(-6deg); }
+  50% { transform: translate(-1px, 0px) rotate(6deg); }
+  75% { transform: translate(1px, -1px) rotate(-6deg); } 
+
+}
+/* sidebar_nav span{
+  display: none;
+} */
+
+/* footer{
+  background-color: #202033;
+  color: #71719e;
+  border-top: none;
+} */
+
+#coso{
+  /* background-color: black; */
+/*   background-color: black; */
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  transition: all 1s;
+  cursor: pointer;
+  background-color: black;
+  background-color: transparent;
+  
+}
+
+#contenedor_coso{
+
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  transition: all 1s;
+  cursor: pointer;
+/*   background-color: red; */
+  position: absolute;
+}
+#coso img{
+  width: 25px;
+  transform: rotateZ(180deg);
+  filter: saturate(0) invert(1) brightness(3);
+
+}
+
+.closed_sidebar #coso{
+  justify-content: center;
+  transition: all 1s;
+  width: 100%;
+  background-color: #131321;
+ 
+}
+.closed_sidebar #coso img{
+
+  transform: rotateZ( 0deg);
+ 
+}
+
+
+
+.closed_sidebar #contenedor_coso{
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  transition: all 1s;
+  cursor: pointer;
+/*   background-color: red; */
+  position: absolute;
 }

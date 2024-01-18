@@ -1,4 +1,10 @@
-:root {--sidebar_width: 300px;}
+:root {
+  --sidebar_width: 300px;  
+  --closed_sidebar_width: 78px;
+  --tiempo: 1s; 
+
+}
+
 body{ 
   margin: 0;
   min-height: 100vh; /*por si no funciona el 100dvh */
@@ -10,17 +16,43 @@ main{
   margin-left:  var(--sidebar_width);
   transition:  margin-left 1s;
 }
+.closed_sidebar main{
+  margin-left:  var(--closed_sidebar_width); 
+  transition:  margin-left 1s;
+}
+ 
+
 footer{
   padding-left: var(--sidebar_width);
   transition:    padding-left 1s;
 }
+ .closed_sidebar footer{
+  padding-left: var(--closed_sidebar_width);
+  transition:    padding-left 1s;
+}
+
+ 
 
 sidebar{
   position: fixed;
   width: var(--sidebar_width);
   height: 100%;
-  left: 0px;    transition: left 1s;
+  left: 0px;   
+  transition: left 1s, width 1s;
+  overflow: hidden;
 }
+sidebar span{ opacity: 1;transition: opacity 1s;user-select: inherit;}
+
+ .closed_sidebar sidebar{
+  position: fixed;
+  width: var(--closed_sidebar_width);
+  height: 100%;
+  left: 0px;    
+  transition: left 1s, width 1s;
+ 
+}
+.closed_sidebar sidebar span{ opacity: 0;transition: opacity 1s; user-select: none; width: 0;}
+ 
 
 main nav{
   margin: -12px -50px;
@@ -39,31 +71,37 @@ main nav{
 }
 
 @media (max-width: 900px) {
-  sidebar{ left: calc(var(--sidebar_width) * -1); /* numero negativo de la variable css */  } 
+  sidebar{ left: calc(var(--sidebar_width) * -1);  } 
+  .closed_sidebar sidebar{ left: calc(var(--closed_sidebar_width) * -1);  } 
   main{  margin-left: 0px;    padding: 10px 35px;}
+  .closed_sidebar main{  margin-left: 0px;    padding: 10px 35px;}
   footer{  padding-left: 0px;}
-
-
+  .closed_sidebar footer{  padding-left: 0px;}
+  
   main nav{
     margin-top: -12px;
   }
 }
 
 
-/* @media (orientation: landscape)  and (min-device-width: 480px) 
+@media (orientation: landscape)  and (min-device-width: 480px) 
 and (max-device-width: 670px) 
 and (orientation: landscape) {
 
   sidebar{ left: calc(var(--sidebar_width) * -1);  } 
+  .closed_sidebar sidebar{ left: calc(var(--closed_sidebar_width) * -1);  } 
   main{  margin-left: 0px;    padding: 10px 35px;}
+  .closed_sidebar main{  margin-left: 0px;    padding: 10px 35px;}
   footer{  padding-left: 0px;}
-} */
+  .closed_sidebar footer{  padding-left: 0px;}
+} 
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
   sidebar{ left: calc(var(--sidebar_width) * -1); /* numero negativo de la variable css */  } 
   main{  margin-left: 0px;    padding: 10px 35px;}
+  .closed_sidebar main{  margin-left: 0px;    padding: 10px 35px;}
   footer{  padding-left: 0px;}
-
+  .closed_sidebar footer{  padding-left: 0px;}
 
   main nav{
     margin-top: -12px;
