@@ -5,7 +5,8 @@ body{
   font-family: system-ui; 
   font-size: 0.95rem; 
   font-size: 16px; 
-  font-weight: 600;        background-color: #202033;
+  font-weight: 600;       
+   /* background-color: #202033; */
 }
 main{  
   padding: 12px 50px;
@@ -263,5 +264,6 @@ sidebar_nav a:hover img{
 
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
-  background: transparent;
+/*   background: transparent; */
+  background-color: #d8d8d8;
 }
