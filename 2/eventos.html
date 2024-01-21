@@ -144,7 +144,7 @@
 }
 
 
-#linea_container.my-class{ display: block;}
+#linea_container.my-class{ display: block;     display: flex;}
 .my-class linea{     padding: 15px 30px;
     overflow-y: auto;
     
@@ -181,14 +181,13 @@
         <a href="personajes.html"  > Personajes </a>
         <a href="eventos.html" class="active">  Eventos </a>
     </nav>
-    <banner>
+    <contenido>
       <h1 > Eventos </h1>
   
-  </banner>
-  <h1 > Eventos </h1>
-  
-        <p> eventos importantes de la linea de tiempo </p>
-        <h3>Linea de tiempo </h3>
+      <p> eventos importantes de la linea de tiempo </p>
+      <h3>Linea de tiempo </h3>
+    </contenido>
+
         <div  id="linea_container" class="full" >
             <linea  id="linea"  >
                 <evento class="first"><div style="background-color: #ffab49;color: white;"> evento 1 </div></evento> 
@@ -257,7 +256,7 @@ function myFunction() {
 
 
 
-  if (linea_container_width < linea_width + 10 ) {
+  if (linea_container_width <= linea_width + 10 ) {
     
 
     document.getElementById("linea_container").classList.add("my-class");

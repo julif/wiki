@@ -5,15 +5,85 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="style.css">
-    <style></style>
+
+    <script src="swiffy-slider.min.js"></script>
+    <link rel="stylesheet" href="swiffy-slider.css">
 
     <style>
-        :root {
-        --tiempo: 70px;
-    }
-    
-    
-    #mas {
+
+.logo-img {
+
+  filter: invert(1);
+
+}
+.white_sidenav  sidebar_nav a{
+    color: #a4a4ae;
+}
+
+
+.white_sidenav  sidebar {
+    background-color:  #ffffff;
+    /* border-right: solid #ececed 4px; */
+}
+.white_sidenav  sidebar_nav .active {
+    background-color: #58baff;
+    background-color: #15212a;
+    color: white;
+}
+
+
+    .white_sidenav sidebar_nav a:not(.active):hover {
+    color: #040404;
+    background-color: #d1d8e875;
+}
+/* .white_sidenav sidebar_nav a img:not(.active){  filter: saturate(0) invert(1) brightness(1);} */
+
+.white_sidenav sidebar_nav  img{  filter: saturate(0) invert(1) brightness(1);} 
+.white_sidenav sidebar_nav  .active img{  filter: saturate(0) invert(0) brightness(1);} 
+
+
+.white_sidenav sidebar separador {background-color: #0000000f;}
+
+.white_sidenav h1 {border-bottom: solid #0000000f 3px;}
+
+h1 {border-bottom: solid #0000000f 3px; margin-bottom: 0px;}
+
+.white_sidenav footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+     color: #868686; 
+    border-top: 4px solid #0000000f;
+}
+
+
+
+
+
+
+
+
+
+/* main > *:not(.full) {
+    background-color: white;
+    max-width: 64rem;
+    margin: 0 auto; 
+    padding-top: 0.5px;
+} */
+
+contenido{
+    background-color: white;
+    /* max-width: 64rem; */
+    margin: 0 auto; 
+    padding-top: 0.5px;
+}
+
+
+
+
+
+
+#mas {
           background-color: #dcdcdc;
           display: block;
           width: 100%;
@@ -29,7 +99,7 @@
           display: table;
           border: 1.5px solid #dddddd;
           border-collapse: collapse;
-        }
+        }    
         .list personajes{
           display: table-row-group;
           border-collapse: collapse;
@@ -52,7 +122,6 @@
           text-align: center;
           width: 55px;
         }
-       
         .list span{
           background-color:  #333a49;
           color: white;
@@ -70,7 +139,7 @@
         }
         .list .thumbnail{
           width: 140px;
-          width: var(--tiempo)!important;
+          width: 70px!important;
           min-width: 50px!important;
           display: flex;
           justify-content: center;
@@ -79,7 +148,6 @@
           align-items: normal!important;
           padding: 0;
         }
-    
         @media screen and (width <= 600px) {
           .mas{
             overflow-x: auto;
@@ -99,113 +167,8 @@
           color: black;
           font-size: 17px;
         }
-      </style> 
     
-    <style>
-    
-    div#mas.block{
-      padding: 0px;
-    }
-      .block personajes{
-        padding: 8px;
-        margin: 0px;
-        display: block;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 8px;
-        /* background-color: #c9c9c9; */
-      }
-      .block personaje {
-        display: block;
-        align-items: center;
-        padding-left: 30px;
-        border: 2px solid #e9e9e9;
-        border: 3px solid #75747a;
-        border: 0px solid #e9e9e9;
-        margin-bottom: 6px;
-        padding: 0px;
-        background-color: white;
-    }
-    .block .thumbnail img{
-      width: 100%;
-    }
-    
-    
-    @media (min-width: 600px) {
-      .block personajes{ grid-template-columns: repeat(2, 1fr); }
-    }
-    
-    @media (min-width: 900px) {
-      .block personajes{ grid-template-columns: repeat(3, 1fr); }
-    }
-    
-    @media (min-width: 1600px) {
-      .block personajes{ grid-template-columns: repeat(4, 1fr); }
-    }
-    @media (min-width: 1900px) {
-      .block personajes{ grid-template-columns: repeat(5, 1fr); }
-    }
-    @media (min-width: 2200px) {
-      .block personajes{ grid-template-columns: repeat(6, 1fr); }
-    }
-    @media (min-width: 2500px) {
-      .block personajes{ grid-template-columns: repeat(7, 1fr); }
-    }
-    @media (min-width: 2800px) {
-      .block personajes{ grid-template-columns: repeat(8, 1fr); }
-    }
-    
-    @media (min-width: 3100px) {
-      .block personajes{ grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); }
-    }
-    
-    
-    
-    .block .personaje_nombre{
-    
-        margin-top: -4px;
-        text-align: center;
-        padding: 10px;
-    
-    }
-    .block .personaje_nombre p{
-        margin: 0;
-        font-size: 23px;
-        color: #0b0b0b;
-    }
-    
-    
-    .block .personaje_raza{
-      padding: 4px 0px 6px;
-        border-top: 3px solid #e6e6e6;
-        margin: 0px 20px;
-    }
-    .block .personaje_raza p{
-      margin: 0;
-    }
-    
-        .block .personaje_status{
-      /* padding: 5px 19px 6px; */
-      padding: 4px 0px 6px;
-      margin: 0px 20px;
-        border-top: 3px solid #e6e6e6;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-    }
-    .block .personaje_status p{
-    margin: 0px;
-    margin-right: 8px;
-    }
-    
-    
-    
-    </style>
-     
-    
-    
-     <style>
-       .list .personaje_raza p , .list .personaje_status p{
+        .list .personaje_raza p , .list .personaje_status p{
     display: none;
     }
     
@@ -238,33 +201,142 @@
         color: black;
         font-size: 20px;
         } 
-     </style>
+
+
+
+        div#mas.block{
+      padding: 0px;
+    }
+      .block personajes{
+        padding: 8px;
+        margin: 0px;
+        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        /* background-color: #c9c9c9; */
+      }
+      .block personaje {
+        display: block;
+        align-items: center;
+        padding-left: 30px;
+        border: 2px solid #e9e9e9;
+        border: 3px solid #75747a;
+        border: 0px solid #e9e9e9;
+        margin-bottom: 6px;
+        padding: 0px;
+        background-color: white;
+    }
+    .block .thumbnail img{
+      width: 100%;
+    }
+
+    @media (min-width: 600px) {
+      .block personajes{ grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 900px) {
+      .block personajes{ grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    @media (min-width: 1600px) {
+      .block personajes{ grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 1900px) {
+      .block personajes{ grid-template-columns: repeat(5, 1fr); }
+    }
+    @media (min-width: 2200px) {
+      .block personajes{ grid-template-columns: repeat(6, 1fr); }
+    }
+    @media (min-width: 2500px) {
+      .block personajes{ grid-template-columns: repeat(7, 1fr); }
+    }
+    @media (min-width: 2800px) {
+      .block personajes{ grid-template-columns: repeat(8, 1fr); }
+    }
+    
+    @media (min-width: 3100px) {
+      .block personajes{ grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); }
+    }
+    
+
+    .block .personaje_nombre{
+    
+    margin-top: -4px;
+    text-align: center;
+    padding: 10px;
+
+}
+.block .personaje_nombre p{
+    margin: 0;
+    font-size: 23px;
+    color: #0b0b0b;
+}
+
+
+.block .personaje_raza{
+  padding: 4px 0px 6px;
+    border-top: 3px solid #e6e6e6;
+    margin: 0px 20px;
+}
+.block .personaje_raza p{
+  margin: 0;
+}
+
+    .block .personaje_status{
+  /* padding: 5px 19px 6px; */
+  padding: 4px 0px 6px;
+  margin: 0px 20px;
+    border-top: 3px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.block .personaje_status p{
+margin: 0px;
+margin-right: 8px;
+}
+
+
+   </style>
+
+
+
+
+
+
 
 
 </head>
-<body>
-    <sidebar> 
-      <!--   <img src="logo_3.png"> -->
-        <sidebar_nav>
-            <a href="index.html"> <img src="img/svg/inicio.svg"> <span> Inicio </span></a> 
-            <a href="personajes.html"  class="active"> <img src="img/svg/personajes_2.svg"> <span> Personajes</span> </a> 
-            <a href="eventos.html" > <img src="img/svg/eventos_3.svg"><span> Eventos</span> </a> 
+<body id="body">
+    <sidebar id="sidebar"> 
+        <!-- <img src="logo_3.png"> -->
+        <sidebar_nav id="sidebar_nav">
+     <!--        <a href="index.html" class="active"> <img src="inicio.svg">  Inicio </a> 
+            <a href="personajes.html"> <img src="personajes_2.svg">  Personajes </a> 
+            <a href="eventos.html" > <img src="eventos_3.svg"> Eventos </a>  -->
         </sidebar_nav> 
+
         <separador></separador>
+
+      <!--   <div id="coso" onclick="myFunction()">  
+            <separador></separador>
+            <div  id="contenedor_coso"><img  src='img/svg/right.svg'></div>
+        </div> -->
+       <!--  <button onclick="myFunction()">Try it</button> -->
     </sidebar>
     <main>
-        <nav >  
-            <a href="index.html" >  Inicio </a>
-            <a href="personajes.html" class="active" > Personajes </a>
+        <nav>  
+            <a href="index.html" class="active">  Inicio </a>
+            <a href="personajes.html" > Personajes </a>
             <a href="eventos.html" >  Eventos </a>
         </nav>
+
+        <!-- <div>
+            <separador></separador>
+        </div> -->
+        <contenido> 
             <h1 > Personajes  </h1>
-         <!--    <ul id="personajes_lista">
-                <li> <a href="personajes/oroboros.html">Oroboros</a></li>
-                <li> <a href="personajes/oroboros.html">Asariel</a></li>
-                <li> <a href="personajes/oroboros.html">Theia</a></li>
-                <li> <a href="personajes/oroboros.html">Nariel</a></li>
-            </ul> -->
             <div> 
                 <!--  barra de busqueda de personaje -->
               <div>
@@ -273,51 +345,58 @@
                <!--  Botones de vista clase y vista lista -->
               <button id="list_btn" class="btn" onclick="cambiar_clase_personaje('lista');"> vista lista </button> 
               <button id="block_btn" class="btn active" onclick="cambiar_clase_personaje('block');"> vista bloque </button>  
+
+
             </div>
-              <div id="mas">
-                <div id="personajes_container">
-                  <personajes id="personajes">
-                    
-                  <!--     .....  -->
-                    <personaje class="personaje">  
-                      <div class="table-body-cell thumb" >
-                        <div class="thumbnail"><img src="img/thumb_oroboros.png"></div>
-                      </div>
-                      <div class="table-body-cell personaje_nombre " >
-                        <a href="personajes/oroboros.html">Oroboros</a>
-                        <pamf>La serpiente blanca </pamf>
-                      </div>
-                      <div class="table-body-cell  personaje_raza">
-                        <p> raza:</p>
-                        <span> entidad cosmica </span> 
-                      </div>
-                      <div class="table-body-cell personaje_status">
-                        <p> status:</p>  <status_label class="vivo"> viva </status_label> </div>
-                    </personaje>
-                    <!--     .....  -->
-                    <personaje class="personaje"> 
-                      <div class="table-body-cell thumb" >
-                        <div class="thumbnail"><img src="img/thumb_enixia.png"></div>
-                      </div>
-                      <div class="table-body-cell personaje_nombre">
-                        <a href="personajes/enixia.html"> Enixia </a>
-                        <pamf> La princesa eclipse </pamf>
-                      </div>
-                      <div class="table-body-cell  personaje_raza">
-                        <p> raza:</p>
-                        <span>elfo oscuro</span>  <span>demonio</span> 
-                      </div>
-                      <div class="table-body-cell personaje_status">
-                        <p> status:</p>  <status_label class="muerto"> muerta </status_label> </div>
-                    </personaje>
-                  </personajes>
-                </div>
-              </div>
-         
-        </div>
+        </contenido> 
+        
+    
+        <div id="mas" class="block" >
+            <div id="personajes_container">
+              <personajes id="personajes">
+                
+              <!--     .....  -->
+                <personaje class="personaje">  
+                  <div class="table-body-cell thumb" >
+                    <div class="thumbnail"><img src="img/thumb_oroboros.png"></div>
+                  </div>
+                  <div class="table-body-cell personaje_nombre " >
+                    <a href="personajes/oroboros.html">Oroboros</a>
+                    <pamf>La serpiente blanca </pamf>
+                  </div>
+                  <div class="table-body-cell  personaje_raza">
+                    <p> raza:</p>
+                    <span> entidad cosmica </span> 
+                  </div>
+                  <div class="table-body-cell personaje_status">
+                    <p> status:</p>  <status_label class="vivo"> viva </status_label> </div>
+                </personaje>
+                <!--     .....  -->
+                <personaje class="personaje"> 
+                  <div class="table-body-cell thumb" >
+                    <div class="thumbnail"><img src="img/thumb_enixia.png"></div>
+                  </div>
+                  <div class="table-body-cell personaje_nombre">
+                    <a href="personajes/enixia.html"> Enixia </a>
+                    <pamf> La princesa eclipse </pamf>
+                  </div>
+                  <div class="table-body-cell  personaje_raza">
+                    <p> raza:</p>
+                    <span>elfo oscuro</span>  <span>demonio</span> 
+                  </div>
+                  <div class="table-body-cell personaje_status">
+                    <p> status:</p>  <status_label class="muerto"> muerta </status_label> </div>
+                </personaje>
+              </personajes>
+            </div>
+          </div>
+     
+    </div>
+        
     </main>
     <footer> proyecto sin nombre - © Julian Filardi </footer>
 </body>
+
 <script>
     // tomar valor predeterminado
     if ( localStorage.julifgithubio_blog_poststyle_preference ==  undefined) {  cambiar_clase_personaje('block'); }
@@ -381,4 +460,18 @@
       
       }
       </script>
+
+<script> 
+    document.getElementById("sidebar_nav").innerHTML = "  <a href='index.html' > <img src='img/svg/inicio.svg'><span>  Inicio </span> </a> "; 
+    document.getElementById("sidebar_nav").innerHTML += "  <a href='personajes.html' class='active'> <img src='img/svg/personajes_2.svg'> <span>  Personajes </span> </a> "; 
+    document.getElementById("sidebar_nav").innerHTML += "  <a href='eventos.html'> <img src='img/svg/eventos_3.svg'>  <span> Eventos </span> </a> "; 
+</script>
+
 </html>
+
+<!-- <script>
+    function myFunction() {
+       var element = document.getElementById("body");
+       element.classList.toggle("closed_sidebar");
+    }
+    </script> -->

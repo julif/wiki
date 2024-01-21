@@ -6,16 +6,19 @@ body{
   font-size: 0.95rem; 
   font-size: 16px; 
   font-weight: 600;       
-   /* background-color: #202033; */
+
 }
 main{  
-  padding: 12px 50px;
+  /* padding: 12px 50px; */
   display: flex;
   flex-direction: column;
   overflow: hidden;
   background-color: white;
 }
-
+contenido{
+  padding: 12px 50px;
+  width: -webkit-fill-available;
+}
 main nav a{
   padding: 17px;
 
@@ -49,7 +52,11 @@ main separador {
   margin-top: 30px;
 }
 .full{
-  margin: -0px -50px;
+
+    /* margin: 0px -50px; */
+    /* background-color: grey; */
+    width: 100%;
+
 }
 
 h1{font-size: 40px;     border-bottom: solid #ececed 3px;}
@@ -125,9 +132,10 @@ sidebar_nav .active{
 sidebar_nav a:not(.active):hover{color: white;     background-color: #18182b;}
 
 /* -------------- Media query  -----------------*/
-@media (max-width: 664px) {
-  main{  padding: 10px 35px;} 
-  .full{  margin: 0px -35px;}
+@media (max-width: 600px) {
+/*   main{  padding: 10px 35px;}  */
+contenido{  padding: 10px 35px;}
+ 
 }
 
 

@@ -57,7 +57,7 @@ sidebar span{ opacity: 1; transition: opacity 1s; user-select: inherit;}
   */
 
 main nav{
-  margin: -12px -50px;
+  margin: 0;
   background-color: white;
   padding: 17px;
   border-bottom: 3px solid #ececed;
@@ -175,7 +175,7 @@ and (orientation: landscape) {
 
 @media screen and (width <= 600px) {
   sidebar{ left: calc(var(--closed_sidebar_width) * -1); }
-  main nav {margin-top: -9px;}
+  main nav {margin-top: 0px;}
   main {
     margin-left: 0px;}
     footer{  padding-left: 0px;}
