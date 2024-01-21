@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--     <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css"> -->
+    <style>
+
+:root {
+
+  --tiempo: 65px; 
+
+}
+
+body{ 
+  background-color: white;
+  color: #adadad;
+  font-family: system-ui; 
+  font-size: 0.95rem; 
+  font-size: 16px; 
+  font-weight: 600;    
+
+  margin: 0px;
+}
+
+
+      #container{
+        background-color: #e4e4e4;
+    padding: 5px;
+    gap: 5px;
+    display: grid;
+    /* margin-bottom: 0; */
+/*     overflow: hidden;
+    overflow-x: auto; */
+    /* display: block; */
+/*     white-space: nowrap; */
+
+      }
+      .se{
+        background-color: white;
+        display: grid;
+        grid-template-columns: var(--tiempo) 1fr 1fr 1fr 1fr;
+      /*   height: 55px; */
+
+
+
+      }
+      .se div{
+        /* border: solid 1px black; */
+        text-align: center;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+ /*    min-width: 100px;  */
+    padding: 0px 8px;
+      }
+
+
+
+      .se   .thumbnail{
+    width: 140px;
+    width: var(--tiempo)!important;
+    min-width: 50px!important;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 15px;
+    /* display: none; */
+    aspect-ratio: 1/0.85;
+    align-items: normal!important;
+    padding: 0;
+}
+
+.nombre{
+  text-align: left;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left!important;
+    color: black;
+}
+
+.estatus{
+
+    justify-content: right!important;
+    padding-right: 40px!important;
+}
+
+
+
+
+@media screen and (width <= 600px) {
+
+  .nombre{ padding-left: 8px; }
+  .estatus{ padding-right: 8px!important;    justify-content: center!important;}
+
+
+} 
+    </style>
+
+
+</head>
+<body>
+  <div id="container">
+   <div class="se">
+    <div class="thumbnail"><img src="img/thumb_oroboros.png"></div>
+    <div class="nombre"> Oroboros </div>
+    <div> entidad cosmica </div>
+    <div>  etiqueta 1 estiqueta 2 estiqueta 3 </div>
+    <div class="estatus"> viva </div>  
+  </div>
+  <div class="se">
+    <div class="thumbnail"><img src="img/thumb_oroboros.png"></div>
+    <div class="nombre"> Nombre </div>
+    <div> raza </div>
+    <div>  etiquetas </div>
+    <div class="estatus"> estatus </div>  
+  </div>
+  
+  
+  </div>
+
+<p> .</p>
+<p> .</p>
+<p> .</p>
+
+  <style>
+
+#resp-table {
+        width: 100%;
+        display: table;
+        border: 1.5px solid #dddddd;
+
+        border-collapse: collapse;
+
+
+    }
+    #resp-table-body{
+        display: table-row-group;
+
+      border-collapse: collapse;
+      
+    }
+    .resp-table-row{
+        display: table-row;
+
+        border-bottom: 8px solid gainsboro;
+
+    }
+    .table-body-cell{
+      display: table-cell;
+    /* border: 1px solid #dddddd; */
+    /* border-top: 1px solid #000000; */
+
+    padding: 8px;
+    /* line-height: 1.42857143; */
+    /* vertical-align: top; */
+    vertical-align: middle;
+    /* padding-top: 0.5em; */
+    /* padding-bottom: 0.5em; */
+    margin-bottom: 18px;
+     background-color: white; 
+
+
+    }
+    .table-body-cell:last-child{
+      text-align: center;
+    width: 55px;
+   
+}
+
+
+    .resp-table-row:last-child{
+      border-bottom: 0px solid gainsboro;
+}
+    span{
+      background-color:  #333a49;
+    color: white;
+    padding: 5px 10px;
+    line-height: 35px;
+    white-space: nowrap;
+    cursor: pointer;
+    }
+    .thumb{
+      padding: 0px;
+      padding: 0px;
+    /* background-color: red; */
+    /* width: 100%; */
+    /* max-width: 50px; */
+    width: 50px;
+    /* height: 50px; */
+
+
+    }
+    .thumbnail{
+    width: 140px;
+    width: var(--tiempo)!important;
+    min-width: 50px!important;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    /* display: none; */
+    aspect-ratio: 1/1;
+    align-items: normal!important;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+.mas {
+    background-color: #dcdcdc;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+@media screen and (width <= 600px) {
+
+  .mas{
+
+  overflow-x: auto;
+}
+
+#resp-table {
+  width: max-content;
+  min-width: 99.9%;
+
+
+
+    }
+} 
+ 
+
+pamf{
+  font-size: 13px;
+    color: white;
+    color: #c4c4c4;
+   
+}
+.personaje_nombre p{
+  margin: 0;
+  color: black;
+  font-size: 17px;
+  
+}
+    </style>
+
+<div class="mas">
+
+
+
+<div id="resp-table">
+  <div id="resp-table-body">
+      <div class="resp-table-row">  
+        <div class="table-body-cell thumb" >
+          <div class="thumbnail"><img src="img/thumb_oroboros.png"></div>
+       </div>
+          <div class="table-body-cell personaje_nombre " >
+             <p>Oroboros</p>
+             <pamf>La serpiente blanca </pamf>
+          </div>
+          <div class="table-body-cell">
+            <span> entidad cosmica </span> 
+          </div>
+       <!--    <div class="table-body-cell">
+              col 3 
+          </div> -->
+          <div class="table-body-cell">
+              viva
+          </div>
+      </div>
+      <div class="resp-table-row"> 
+        <div class="table-body-cell thumb" >
+          <div class="thumbnail"><img src="img/thumb_oroboros.png"></div>
+       </div>
+          <div class="table-body-cell personaje_nombre">
+            <p> Enixia </p>
+             <pamf> La princesa eclipse </pamf>
+          </div>
+          <div class="table-body-cell">
+            <span>elfo</span>  <span>elfo oscuro</span>  <span>demonio</span> 
+          </div>
+    <!--       <div class="table-body-cell">
+              second row col 3 
+          </div> -->
+          <div class="table-body-cell">
+               muerta 
+          </div>
+      </div>
+  </div>
+
+
+</div>
+
+
+
+
+</div>

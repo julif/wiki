@@ -6,6 +6,238 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="style.css">
     <style></style>
+
+    <style>
+        :root {
+        --tiempo: 70px;
+    }
+    
+    
+    #mas {
+          background-color: #dcdcdc;
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          padding: 7px;
+          box-sizing: border-box;
+        }
+        .list #personajes_container {
+          width: 100%;
+          display: table;
+          border: 1.5px solid #dddddd;
+          border-collapse: collapse;
+        }
+        .list personajes{
+          display: table-row-group;
+          border-collapse: collapse;
+        }
+        .list personaje{
+          display: table-row;
+          border-bottom: 8px solid gainsboro;
+        }
+        .list personaje:last-child{
+          border-bottom: 0px solid gainsboro;
+        }
+        .list .table-body-cell{
+          display: table-cell;
+          padding: 0px 12px;
+          vertical-align: middle;
+          margin-bottom: 18px;
+          background-color: white; 
+        }
+        .list .table-body-cell:last-child{
+          text-align: center;
+          width: 55px;
+        }
+       
+        .list span{
+          background-color:  #333a49;
+          color: white;
+          background-color: #e0e0e0;
+          color: black;
+          padding: 5px 10px;
+          line-height: 35px;
+          white-space: nowrap;
+          cursor: pointer;
+        }
+        .list .thumb{
+          padding: 0px;
+          padding: 0px;
+          width: 50px;
+        }
+        .list .thumbnail{
+          width: 140px;
+          width: var(--tiempo)!important;
+          min-width: 50px!important;
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+          aspect-ratio: 1/1;
+          align-items: normal!important;
+          padding: 0;
+        }
+    
+        @media screen and (width <= 600px) {
+          .mas{
+            overflow-x: auto;
+          }
+          .list #personajes_container {
+            width: max-content;
+            min-width: 99.9%;
+          }
+        } 
+        .list pamf{
+          font-size: 13px;
+          color: white;
+          color: #c4c4c4;
+        }
+        .list .personaje_nombre p{
+          margin: 0;
+          color: black;
+          font-size: 17px;
+        }
+      </style> 
+    
+    <style>
+    
+    div#mas.block{
+      padding: 0px;
+    }
+      .block personajes{
+        padding: 8px;
+        margin: 0px;
+        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        /* background-color: #c9c9c9; */
+      }
+      .block personaje {
+        display: block;
+        align-items: center;
+        padding-left: 30px;
+        border: 2px solid #e9e9e9;
+        border: 3px solid #75747a;
+        border: 0px solid #e9e9e9;
+        margin-bottom: 6px;
+        padding: 0px;
+        background-color: white;
+    }
+    .block .thumbnail img{
+      width: 100%;
+    }
+    
+    
+    @media (min-width: 664px) {
+      .block personajes{ grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 994px) {
+      .block personajes{ grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    @media (min-width: 1324px) {
+      .block personajes{ grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 1654px) {
+      .block personajes{ grid-template-columns: repeat(5, 1fr); }
+    }
+    @media (min-width: 1984px) {
+      .block personajes{ grid-template-columns: repeat(6, 1fr); }
+    }
+    @media (min-width: 2314px) {
+      .block personajes{ grid-template-columns: repeat(7, 1fr); }
+    }
+    @media (min-width: 2614px) {
+      .block personajes{ grid-template-columns: repeat(8, 1fr); }
+    }
+    
+    @media (min-width: 2944px) {
+      .block personajes{ grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); }
+    }
+    
+    
+    
+    .block .personaje_nombre{
+    
+        margin-top: -4px;
+        text-align: center;
+        padding: 10px;
+    
+    }
+    .block .personaje_nombre p{
+        margin: 0;
+        font-size: 23px;
+        color: #0b0b0b;
+    }
+    
+    
+    .block .personaje_raza{
+      padding: 4px 0px 6px;
+        border-top: 3px solid #e6e6e6;
+        margin: 0px 20px;
+    }
+    .block .personaje_raza p{
+      margin: 0;
+    }
+    
+        .block .personaje_status{
+      /* padding: 5px 19px 6px; */
+      padding: 4px 0px 6px;
+      margin: 0px 20px;
+        border-top: 3px solid #e6e6e6;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .block .personaje_status p{
+    margin: 0px;
+    margin-right: 8px;
+    }
+    
+    
+    
+    </style>
+     
+    
+    
+     <style>
+       .list .personaje_raza p , .list .personaje_status p{
+    display: none;
+    }
+    
+    status_label{
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .vivo{background-color: #489854;}
+    .muerto{background-color: black;}
+    
+    personajes span{
+          background-color:  #333a49;
+          color: white!important;
+          background-color: #e0e0e0;
+          background-color:   #0184df!important;
+          padding: 5px 10px;
+          line-height: 35px;
+          white-space: nowrap;
+          cursor: pointer;
+        }
+        .personaje_nombre{
+          /* background-color: red; */
+        } 
+        .personaje_nombre a{
+         display: block;
+         display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        } 
+     </style>
+
+
 </head>
 <body>
     <sidebar> 
@@ -23,20 +255,127 @@
             <a href="personajes.html" class="active" > Personajes </a>
             <a href="eventos.html" >  Eventos </a>
         </nav>
-        <div>
-            <banner>
-                <h1 > Personajes  </h1>
-            
-            </banner>
             <h1 > Personajes  </h1>
-            <ul id="personajes_lista">
+         <!--    <ul id="personajes_lista">
                 <li> <a href="personajes/oroboros.html">Oroboros</a></li>
                 <li> <a href="personajes/oroboros.html">Asariel</a></li>
                 <li> <a href="personajes/oroboros.html">Theia</a></li>
                 <li> <a href="personajes/oroboros.html">Nariel</a></li>
-            </ul>
+            </ul> -->
+            <div> 
+                <!--  barra de busqueda de personaje -->
+              <div>
+                <input type="text" id="buscar_personaje" placeholder="Buscar.." title="Buscar personaje" style="width: 100%;    border: 2px solid #e9e9e9; height:50px;width: -webkit-fill-available;">
+              </div>
+               <!--  Botones de vista clase y vista lista -->
+              <button id="list_btn" class="btn" onclick="cambiar_clase_personaje('lista');"> vista lista </button> 
+              <button id="block_btn" class="btn active" onclick="cambiar_clase_personaje('block');"> vista bloque </button>  
+            </div>
+              <div id="mas">
+                <div id="personajes_container">
+                  <personajes id="personajes">
+                    
+                  <!--     .....  -->
+                    <personaje class="personaje">  
+                      <div class="table-body-cell thumb" >
+                        <div class="thumbnail"><img src="img/thumb_oroboros.png"></div>
+                      </div>
+                      <div class="table-body-cell personaje_nombre " >
+                        <a href="personajes/oroboros.html">Oroboros</a>
+                        <pamf>La serpiente blanca </pamf>
+                      </div>
+                      <div class="table-body-cell  personaje_raza">
+                        <p> raza:</p>
+                        <span> entidad cosmica </span> 
+                      </div>
+                      <div class="table-body-cell personaje_status">
+                        <p> status:</p>  <status_label class="vivo"> viva </status_label> </div>
+                    </personaje>
+                    <!--     .....  -->
+                    <personaje class="personaje"> 
+                      <div class="table-body-cell thumb" >
+                        <div class="thumbnail"><img src="img/thumb_enixia.png"></div>
+                      </div>
+                      <div class="table-body-cell personaje_nombre">
+                        <a href="personajes/enixia.html"> Enixia </a>
+                        <pamf> La princesa eclipse </pamf>
+                      </div>
+                      <div class="table-body-cell  personaje_raza">
+                        <p> raza:</p>
+                        <span>elfo oscuro</span>  <span>demonio</span> 
+                      </div>
+                      <div class="table-body-cell personaje_status">
+                        <p> status:</p>  <status_label class="muerto"> muerta </status_label> </div>
+                    </personaje>
+                  </personajes>
+                </div>
+              </div>
+         
         </div>
     </main>
     <footer> proyecto sin nombre - © Julian Filardi </footer>
 </body>
+<script>
+    // tomar valor predeterminado
+    if ( localStorage.julifgithubio_blog_poststyle_preference ==  undefined) {  cambiar_clase_personaje('block'); }
+  else{cambiar_clase_personaje(localStorage.julifgithubio_blog_poststyle_preference); }
+  
+  
+  
+  
+  function cambiar_clase_personaje(valor){
+    switch (valor) {
+      case "lista":
+      document.getElementById("block_btn").classList.remove("active");
+      document.getElementById("list_btn").classList.add("active");
+  
+  
+      document.getElementById("mas").classList.add("list");
+      document.getElementById('mas').classList.remove("block");
+  
+  
+  
+      localStorage.julifgithubio_blog_poststyle_preference = 'lista';
+        break;
+      case "block":
+      document.getElementById("block_btn").classList.add("active");
+      document.getElementById("list_btn").classList.remove("active");
+  
+      document.getElementById("mas").classList.remove("list");
+      document.getElementById('mas').classList.add("block");
+  
+  
+  
+      localStorage.julifgithubio_blog_poststyle_preference = 'block';
+    }
+  
+   }
+  
+    </script>
+    <script>
+      var input = document.getElementById("buscar_personaje");
+      input.addEventListener("input", busqueda);
+      
+      function busqueda(e) {
+        var filter = e.target.value.toUpperCase();
+        var list = document.getElementById("personajes");
+        var divs = list.getElementsByTagName("personaje");
+     
+        for (var i = 0; i < divs.length; i++) {
+         /*  var detalles = divs[i].getElementsByClassName("personaje_detalles")[0].getElementsByClassName("personaje_nombre_y_raza")[0].getElementsByClassName("personaje_nombre")[0]; */
+          var detalles = divs[i].getElementsByClassName("personaje_nombre")[0];
+          var a = detalles.getElementsByTagName("a")[0];
+          if (a) {
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              divs[i].style.display = "";
+              // mostrar_cantidad_de_personajes();
+            } else {
+              divs[i].style.display = "none";
+              // mostrar_cantidad_de_personajes();
+            }
+          }
+        }
+      
+      }
+      </script>
 </html>

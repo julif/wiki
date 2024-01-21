@@ -158,8 +158,11 @@ and (orientation: landscape) {
 
  */
 
+
  /* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width:1000px) {
+
+
+@media screen and ( width <= 1000px ) {
   sidebar{width: var(--closed_sidebar_width);}
   sidebar span{ opacity: 0; transition: opacity var(--tiempo); user-select: none; width: 0;}
   main {
@@ -168,11 +171,13 @@ and (orientation: landscape) {
 }
 
 /* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+
+
+@media screen and (width <= 600px) {
   sidebar{ left: calc(var(--closed_sidebar_width) * -1); }
   main nav {margin-top: -9px;}
   main {
     margin-left: 0px;}
     footer{  padding-left: 0px;}
 
-}
+} 
