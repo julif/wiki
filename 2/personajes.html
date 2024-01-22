@@ -239,9 +239,14 @@ contenido{
         margin-bottom: 6px;
         padding: 0px;
         background-color: white;
+
+
+        display: flex;
+    flex-wrap: wrap;
     }
     .block .thumbnail img{
       width: 100%;
+      min-height: 156px;
     }
 
     @media (min-width: 600px) {
@@ -255,20 +260,20 @@ contenido{
     @media (min-width: 1600px) {
       .block personajes{ grid-template-columns: repeat(4, 1fr); }
     }
-    @media (min-width: 1900px) {
+    @media (min-width: 2200px) {
       .block personajes{ grid-template-columns: repeat(5, 1fr); }
     }
-    @media (min-width: 2200px) {
+    @media (min-width: 2500px) {
       .block personajes{ grid-template-columns: repeat(6, 1fr); }
     }
-    @media (min-width: 2500px) {
+    @media (min-width: 2800px) {
       .block personajes{ grid-template-columns: repeat(7, 1fr); }
     }
-    @media (min-width: 2800px) {
+    @media (min-width: 3100px) {
       .block personajes{ grid-template-columns: repeat(8, 1fr); }
     }
     
-    @media (min-width: 3100px) {
+    @media (min-width: 3400px) {
       .block personajes{ grid-template-columns: repeat(auto-fit, minmax( 325px, 1fr)); }
     }
     
@@ -278,6 +283,7 @@ contenido{
     margin-top: -4px;
     text-align: center;
     padding: 10px;
+    width: 100%;
 
 }
 .block .personaje_nombre p{
@@ -293,6 +299,7 @@ contenido{
   padding: 4px 0px 6px;
     border-top: 3px solid #e6e6e6;
     margin: 0px 20px;
+    width: 100%;
 }
 .block .personaje_raza p{
   margin: 0;
@@ -308,6 +315,8 @@ contenido{
     display: flex;
     align-items: center;
     justify-content: end;
+    align-self: flex-end;
+    width: 100%;
 }
 .block .personaje_status p{
 margin: 0px;
