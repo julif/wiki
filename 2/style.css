@@ -290,6 +290,11 @@ main nav {
 main nav a{   color: #71719e;}
 
 
-.slider-container{
+ list .slider-container{
   overflow: hidden;
+  height: 100%;
+  width: 99px;
+}
+.slider-container li{
+
 }
