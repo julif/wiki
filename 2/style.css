@@ -8,6 +8,7 @@ body{
   font-weight: 600;       
 
 }
+/* *{ min-width: 0;} */
 main{  
   /* padding: 12px 50px; */
   display: flex;
