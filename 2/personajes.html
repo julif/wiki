@@ -280,7 +280,7 @@ contenido{
     }
     
     @container sidebar (min-width: 1600px) {
-      .block personajes{ grid-template-columns: repeat(4, 1fr); }
+      .block personajes{ grid-template-columns: repeat(4, 1fr); padding: 24px 45px; }
     }
     @container sidebar (min-width: 2200px) {
       .block personajes{ grid-template-columns: repeat(5, 1fr); }
@@ -392,6 +392,13 @@ padding: 9px;
 /*   background-color: #0184df; */
   fill: white;
 }
+
+
+/* .btn:hover svg{ 
+  animation: icon_shake 0.5s;
+  animation-iteration-count: 1;
+}
+ */
 
 #block_btn svg{
 /* height: 22px; */
@@ -583,7 +590,27 @@ padding: 9px;
                    <!--     .....  -->
                    <personaje class="personaje"> 
                     <div class="table-body-cell thumb" >
-                      <div class="thumbnail"><a href="personajes/enixia.html"><img src="img/thumb_enixia.png"></a></div>
+                      <div class="thumbnail">
+                        <div class="swiffy-slider slider-item-nogap slider-nav-caretfill slider-nav-sm  slider-nav-animation-slow">
+                          <ul class="slider-container">
+                              <li><a href="personajes/enixia.html"><img src="img/thumb_enixia.png"></a></li>
+                              <li><a href="personajes/enixia.html"><img src="img/thumb_enixia_2.png"></a></li>
+                         
+                          </ul>
+                   
+                      
+                          <button type="button" class="slider-nav"></button>
+                          <button type="button" class="slider-nav slider-nav-next"></button> 
+                      
+                          <div class="slider-indicators">
+                              <button class="active"></button>
+                              <button class=""></button>
+                             
+                          </div>
+                      </div>
+                        
+                  
+                    </div>
                     </div>
                     <div class="table-body-cell personaje_nombre">
                       <a href="personajes/enixia.html"> Enixia </a>

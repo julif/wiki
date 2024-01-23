@@ -288,3 +288,8 @@ main nav {
   border-bottom: 3px solid #202033;
 }
 main nav a{   color: #71719e;}
+
+
+.slider-container{
+  overflow: hidden;
+}
