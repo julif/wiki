@@ -275,3 +275,16 @@ sidebar_nav a:hover img{
 /*   background: transparent; */
   background-color: #d8d8d8;
 }
+
+footer{
+  color: #71719e;
+     border-top: none; 
+    background-color: #202033;
+}
+
+main nav {
+  background-color: #202033;
+  color: #71719e;
+  border-bottom: 3px solid #202033;
+}
+main nav a{   color: #71719e;}
