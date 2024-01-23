@@ -105,9 +105,6 @@ contenido{
           display: table;
           border: 1.5px solid #dddddd;
           border-collapse: collapse;
-
-          
-         
         }    
         .list personajes{
           display: table-row-group;
@@ -173,12 +170,19 @@ contenido{
       
         }
         @media screen and (width <= 600px) {
-          .mas{
+          /*  .mas{
             overflow-x: auto;
           }
           .list #personajes_container {
             width: max-content;
             min-width: 99.9%;
+          } */
+          .list{
+           overflow: hidden!important;
+          }
+
+          .list .personaje_raza, .list .personaje_status{
+            display: none;
           }
         } 
         .list pamf{
@@ -318,6 +322,9 @@ contenido{
     font-size: 23px;
     color: #0b0b0b;
 }
+.block .personaje_nombre a{display: flex;
+    justify-content: center;
+    width: 100%;}
 .block pamf{
   color: #c4c4c4;
 }
