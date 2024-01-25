@@ -506,7 +506,25 @@ padding: 9px;
             <path d="M0 0v2h2v-2h-2zm3 0v2h2v-2h-2zm3 0v2h2v-2h-2zm-6 3v2h2v-2h-2zm3 0v2h2v-2h-2zm3 0v2h2v-2h-2zm-6 3v2h2v-2h-2zm3 0v2h2v-2h-2zm3 0v2h2v-2h-2z" />
           </svg> </button>  
            </div>
-    
+           <style>
+              .personaje_estado_min{
+              display: none !important;
+            }
+    .personaje_estado_min img{
+
+      width: 20px;
+      opacity: 0.2;
+
+     
+
+    }
+    @media screen and (width <= 600px){
+        /* .list .personaje_estado_min {
+          display: table-cell!important;
+} */
+}
+           </style>
+
         <div id="mas" class="block" >
             <div id="personajes_container">
               <personajes id="personajes">
@@ -519,6 +537,11 @@ padding: 9px;
                   <div class="table-body-cell personaje_nombre " >
                     <a href="personajes/oroboros.html">Oroboros</a>
                     <pamf>La serpiente blanca </pamf>
+                  </div>
+
+             
+                  <div class="table-body-cell  personaje_estado_min">
+                    <img src='skull.svg'>
                   </div>
                   <div class="table-body-cell  personaje_raza">
                     <p> raza:</p>
@@ -633,6 +656,7 @@ padding: 9px;
                    <personaje class="personaje"> 
                     <div class="table-body-cell thumb" >
                       <div class="thumbnail">
+                   
                         <div class="swiffy-slider slider-item-nogap slider-nav-caretfill slider-nav-sm  slider-nav-animation-slow ">
                    <!--        <div class="swiffy-slider slider-item-nogap slider-nav-caretfill slider-nav-sm  slider-nav-animation-slow slider-nav-mousedrag"> -->
                           

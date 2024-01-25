@@ -1,21 +1,36 @@
-
+:root {
+  --main_background: #ffffff;
+/* --  sidebar -- */
+--sidebar_background: #202033;
+}
+*{ min-width: 0;} 
 body{ 
-  background-color: white;
+  background-color: var(--main_background);
   color: #626970;
   font-family: system-ui; 
   font-size: 0.95rem; 
   font-size: 16px; 
   font-weight: 600;       
-
 }
-/* *{ min-width: 0;} */
+sidebar{
+  background-color:  var(--sidebar_background); 
+}
 main{  
-  /* padding: 12px 50px; */
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: white;
+  background-color: var(--main_background);
 }
+main nav {
+  background-color: #202033;
+  color: #71719e;
+  border-bottom: 3px solid #202033;
+}
+main nav a{   color: #71719e;}
+main nav  span{
+ display: none;
+}
+
 contenido{
   padding: 12px 50px;
   width: -webkit-fill-available;
@@ -115,9 +130,7 @@ footer{
   border-top: 4px solid #9899a030;
   background-color: white;
 }
-sidebar{
-  background-color:  #202033;
-}
+
 /* sidebar img{
   padding: 20px;
   width: -webkit-fill-available;
@@ -326,13 +339,6 @@ footer{
      border-top: none; 
     background-color: #202033;
 }
-
-main nav {
-  background-color: #202033;
-  color: #71719e;
-  border-bottom: 3px solid #202033;
-}
-main nav a{   color: #71719e;}
 
 
  list .slider-container{

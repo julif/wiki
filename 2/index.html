@@ -107,8 +107,8 @@ main img{
        <!--  <button onclick="myFunction()">Try it</button> -->
     </sidebar>
     <main>
-        <nav> 
-            <a href='index.html' class='active'  > <img src='img/svg/inicio.svg'><span></span> </a>
+        <nav id="main_nav"> 
+            <a href='index.html' class='active'  ><img src='img/svg/inicio.svg'><span></span> </a>
             <a href='personajes.html' > <img src='img/svg/personajes_2.svg'> <span></span> </a> 
             <a href='eventos.html' > <img src='img/svg/eventos_3.svg'>  <span></span> </a>
         </nav> 
@@ -184,6 +184,13 @@ main img{
     document.getElementById("sidebar_nav").innerHTML = "  <a href='index.html' class='active'> <img src='img/svg/inicio.svg'><span>  Inicio </span> </a> "; 
     document.getElementById("sidebar_nav").innerHTML += "  <a href='personajes.html'> <img src='img/svg/personajes_2.svg'> <span>  Personajes </span> </a> "; 
     document.getElementById("sidebar_nav").innerHTML += "  <a href='eventos.html'> <img src='img/svg/eventos_3.svg'>  <span> Eventos </span> </a> "; 
+
+    document.getElementById("main_nav").innerHTML = "  <a href='index.html' class='active'> <img src='img/svg/inicio.svg'><span>  Inicio </span> </a> "; 
+    document.getElementById("main_nav").innerHTML += "  <a href='personajes.html'> <img src='img/svg/personajes_2.svg'> <span>  Personajes </span> </a> "; 
+    document.getElementById("main_nav").innerHTML += "  <a href='eventos.html'> <img src='img/svg/eventos_3.svg'>  <span> Eventos </span> </a> "; 
+
+
+    
 </script>
 </html>
 
